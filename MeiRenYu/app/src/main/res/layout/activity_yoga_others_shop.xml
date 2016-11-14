@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2FD2D1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="其他商品"
+            android:textColor="#FEFEFE"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/tu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/tu3_1" />
+
+                <ImageView
+                    android:id="@+id/tu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/tu1"
+                    android:src="@mipmap/tu4_1" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="派普瑜伽砖\n价格：29"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu2"
+                    android:layout_marginLeft="99dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/text1"
+                    android:text="朵琪专业瑜伽服\n价格：82"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/tu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="11dp"
+                    android:src="@mipmap/tu7" />
+
+                <ImageView
+                    android:id="@+id/tu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@id/tu3"
+                    android:src="@mipmap/tu8" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu3"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="健身瑜伽服两件套\n价格：98"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu4"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/text3"
+                    android:text="青蛙瑜伽垫\n价格：40"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/tu5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text3"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="11dp"
+                    android:src="@mipmap/tu9" />
+
+                <ImageView
+                    android:id="@+id/tu6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text4"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@id/tu3"
+                    android:src="@mipmap/tu10" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu5"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="樊酷初学加厚瑜伽垫\n价格：52"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu6"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/text5"
+                    android:text="艾米达瑜伽毛巾\n价格：16"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/tu7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text5"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="11dp"
+                    android:src="@mipmap/tu11" />
+
+                <ImageView
+                    android:id="@+id/tu8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text6"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toRightOf="@id/tu7"
+                    android:src="@mipmap/tu6_1" />
+
+                <TextView
+                    android:id="@+id/text7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu7"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="博帝加厚型专业瑜伽垫\n价格：86"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu8"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/text7"
+                    android:text="艾米达专业瑜伽垫\n价格：68"
+                    android:textColor="#898E92"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

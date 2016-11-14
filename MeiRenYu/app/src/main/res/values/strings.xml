@@ -1,0 +1,120 @@
+<resources>
+    <string name="shuo_ye">首页</string>
+    <string name="gouwu_che">购物车</string>
+    <string name="gouwuche_kongbai">什么都还没有诶\n不来一点吗？</string>
+    <string name="bianji">编辑</string>
+    <string name="jiesuanjieshao01">梵酷初学加厚型瑜伽垫*1</string>
+    <string name="jiesuanguige01">颜色:蓝色  大小:标准尺寸</string>
+    <string name="jiesuanjieshao02">健身瑜伽服两件套*1</string>
+    <string name="jiesuanguige02">颜色:黑色 大小:M</string>
+    <string name="jiesuan">结算:</string>
+    <string name="jiege">价格:</string>
+    <string name="shanchu">删除</string>
+    <string name="ding_dan">订单</string>
+    <string name="jiazaiIng">加载ING</string>
+    <string name="qingkong">清空</string>
+    <string name="shangcheng_problem">是不是哪里出 \n 了什么问题？</string>
+    <string name="my_order">我的订单</string>
+    <string name="quanbu">全部</string>
+    <string name="daifukuan">待付款</string>
+    <string name="daifahuo">待发货</string>
+    <string name="daishouhuo">待收货</string>
+    <string name="jianyiyijian">建议意见</string>
+    <string name="xiejianyiyijian">写出您对我们的建议或意见</string>
+    <string name="tijiao">提交</string>
+    <string name="jiaoyichenggong">交易成功</string>
+    <string name="heji">合计:</string>
+    <string name="pingjia">评价</string>
+    <string name="xiugaimima">修改密码</string>
+    <string name="jiumima">旧密码:</string>
+    <string name="mimahint">6-16个字符，区分大小写</string>
+    <string name="xinmima">新密码:</string>
+    <string name="querenmima">请再次确认密码:</string>
+    <string name="queding">确定</string>
+    <string name="jifen">积分</string>
+    <string name="xiangguantuijian">相关推荐</string>
+    <string name="shouye">首页</string>
+    <string name="gouwuche">购物车</string>
+    <string name="zaixiankefu">在线客服</string>
+    <string name="app_shop">美人域商城</string>
+
+
+    <string name="kugouyinyue">酷狗音乐</string>
+    <string name="yingyinshiting">影音视听 | 32.7M</string>
+    <string name="anzhuang">安装</string>
+    <string name="shangxian">酷狗音乐8.0全新上线</string>
+    <string name="tuiguangjifen">推广积分</string>
+    <string name="quanbujifen">全部积分</string>
+    <string name="fen">分</string>
+    <string name="jifen_huanhaoli">积分换好礼</string>
+    <string name="app_name">YuMeiRen</string>
+    <string name="search_title_name">商品名称</string>
+    <string name="search_edit_hint">请输入关键字</string>
+    <string name="search_hot_text">热门搜索</string>
+    <string name="search_history_text">历史搜索</string>
+    <string name="yoga_ball">瑜伽球</string>
+    <string name="yoha_colthes">瑜伽服</string>
+    <string name="yoga_brick">瑜伽砖</string>
+    <string name="yoga_mat">专业瑜伽垫</string>
+    <string name="first_yoga_colthes">初学者瑜伽服</string>
+    <string name="yuga_xiangxun">瑜伽香薰</string>
+    <string-array name="message">
+        <item>商品名称</item>
+        <item>请输入关键字</item>
+        <item>热门搜索</item>
+        <item>历史搜索</item>
+        <item>初学者瑜伽服</item>
+        <item>瑜伽香薰</item>
+        <item>专业瑜伽垫</item>
+        <item>瑜伽服</item>
+    </string-array>
+    <string name="text_demo">演示文本</string>
+    <string name="my_plan">我的计划</string>
+    <string name="delete">删除</string>
+    <string name="my_plan_time">时间</string>
+    <string name="my_plan_title">标题</string>
+    <string name="my_plan_content">内容</string>
+    <string name="share_app">分享软件</string>
+    <string name="share_title">让好友扫码和你一起瑜伽吧！</string>
+    <string name="share_ways">或通过以下方式分享</string>
+    <string name="share_to_weixin_friends">分享给微信好友</string>
+    <string name="share_to_friend_zone">分享到朋友圈</string>
+    <string name="not_logged_in">未登录</string>
+    <string name="log_in">登录</string>
+    <string name="fans">粉丝</string>
+    <string name="attention">关注</string>
+    <string name="scores">积分</string>
+    <string name="my_friends">我的好友</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="my_post">我的帖子</string>
+    <string name="relative_recommend">相关推荐</string>
+    <string name="home_page">首页</string>
+    <string name="the_pool">瑜池</string>
+    <string name="shop">商城</string>
+    <string name="mine">我的</string>
+    <string name="my_sign">瑜伽，身体和心灵的放松</string>
+    <string name="set">设置</string>
+    <string name="hint_input_account">请输入手机号/账号</string>
+    <string name="hint_input_password">请输入6-12位密码</string>
+    <string name="hint_input_verification_code">请输入验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="read_and_agree">阅读并同意《用户协议》</string>
+    <string name="register_now">立即注册</string>
+    <string name="other_ways_login">第三方登录</string>
+    <string name="ali_pay">支付宝</string>
+    <string name="weixin">微信</string>
+    <string name="weibo">微博</string>
+    <string name="login_now">立即登录</string>
+    <string name="bind_weibo">绑定微博</string>
+    <string name="bind_now">立即绑定</string>
+    <string name="about_us">关于我们</string>
+    <string name="check_for_update">检查更新</string>
+    <string name="advice">建议意见</string>
+    <string name="give_us_the_points">为我们打分</string>
+    <string name="teams_and_agreements">使用条款和隐私协议</string>
+    <string name="teams_content">人鱼公司版权所有\nCoryright @ 2011-2016 renyu.\nAll Rights Reserved</string>
+    <string name="chat_content">你的八块腹肌练得怎么样了</string>
+    <string name="chat_friend">异域至尊</string>
+    <string name="send">发送</string>
+
+</resources>

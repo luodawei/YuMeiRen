@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yss.yumeiren">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.xx.meirenyu.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xx.meirenyu.activity.GoodsDetailaActivity"/>//购物详情页面
+        <activity android:name="com.xx.meirenyu.activity.SettingActivity"/>//设置页面
+        <activity android:name="com.xx.meirenyu.activity.OnlineServiceActivity"/>//客服页面
+        <activity android:name="com.xx.meirenyu.activity.GoodsSearchActivity"/>商品搜索页面
+        <activity android:name="com.xx.meirenyu.activity.MessageHintActivity"/>消息提示页面
+        <activity android:name="com.xx.meirenyu.activity.LoginActivity"/><!--我的页面-->
+        <activity android:name="com.xx.meirenyu.activity.MyFriendsActivity"/><!--我的好友页-->
+        <activity android:name="com.xx.meirenyu.activity.MyPlanDetailActivity"/><!--我的计划详情页-->
+        <activity android:name="com.xx.meirenyu.activity.MyPlanListViewActivity"/><!--我的计划列表页-->
+        <activity android:name="com.xx.meirenyu.activity.SetLoginActivity"/><!--登录页面-->
+        <activity android:name="com.xx.meirenyu.activity.SetWeiboActivity"/><!--绑定微博-->
+        <activity android:name="com.xx.meirenyu.activity.SetRegisterActivity"/><!--注册页面-->
+        <activity android:name="com.xx.meirenyu.activity.ShareAppActivity"/><!--软件分享页面-->
+        <activity android:name="com.xx.meirenyu.activity.AboutUsActivity"/><!--关于我们页面-->
+        <activity android:name="com.xx.meirenyu.activity.ChatPageActivity"/><!--好友聊天页面-->
+        <activity android:name="com.xx.meirenyu.activity.AlreadyLogInActivity"/><!--登录完成页面-->
+
+    </application>
+</manifest>

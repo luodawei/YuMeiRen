@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="meirenyu_bg_green">#2FD2D0</color>
+    <color name="jiesuan_bg_grey">#f1f6f9</color>
+    <color name="grey">#dfdfdf</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="textcolor">#898E92</color>
+    <color name="jianyi_bg">#F1F1F1</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="head_green">#2fd2d0</color>
+    <color name="gray_black">#898e92</color>
+    <color name="line_bg">#dcdddf</color>
+    <color name="font_white">#ffffff</color>
+    <color name="search_btn_bg">#fafafa</color>
+    <color name="search_bar_false_bg">#898e92</color>
+    <color name="font_red">#fd2626</color>
+    <color name="shezhi_bg">#f7f7f7</color>
+    <color name="shezhi_font_bk">#3d3d3d</color>
+    <color name="setting_clear_bk">#b8b8b8</color>
+    <color name="blak">#000000</color>
+    <color name="main_blue">#2FD2D1</color>
+    <color name="light_gray">#B5B5B5</color>
+    <color name="gray_white">#D1D1D1</color>
+</resources>

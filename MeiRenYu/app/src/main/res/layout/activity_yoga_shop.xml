@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2FD2D1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="美人瑜商城"
+            android:textColor="#FEFEFE"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/cengtu1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="166dp"
+                    android:layout_marginTop="125dp"
+                    android:src="@mipmap/tuoyuan1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="125dp"
+                    android:src="@mipmap/tuoyuan2" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="8dp"
+                android:background="@mipmap/shousuo"
+                android:drawableLeft="@mipmap/cazao"
+                android:paddingBottom="7dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="7dp"
+                android:text="专业瑜伽垫"
+                android:textColor="#DEDEDE"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@mipmap/yuan"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="17dp"
+                    android:paddingTop="30dp"
+                    android:text="瑜伽服"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@mipmap/yuan1"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="17dp"
+                    android:paddingTop="30dp"
+                    android:text="瑜伽垫"
+                    android:textColor="#9B9FA2"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@mipmap/yuan1"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="17dp"
+                    android:paddingTop="30dp"
+                    android:text="其它商品"
+                    android:textColor="#9B9FA2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="23dp"
+                android:drawableLeft="@mipmap/juxing"
+                android:drawablePadding="4dp"
+                android:text="推荐商品"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/tu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@mipmap/tu1" />
+
+                <ImageView
+                    android:id="@+id/tu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@id/tu1"
+                    android:src="@mipmap/tu2" />
+
+                <ImageView
+                    android:id="@+id/tu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@id/tu2"
+                    android:src="@mipmap/tu3" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="莫代尔专业瑜伽服"
+                    android:textColor="#898E92"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu2"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/text1"
+                    android:text="艾米达加厚型瑜伽垫"
+                    android:textColor="#898E92"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tu3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/text2"
+                    android:text="派普瑜伽砖"
+                    android:textColor="#898E92"
+                    android:textSize="11dp" />
+
+                <ImageView
+                    android:id="@+id/tu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@mipmap/tu4" />
+
+                <ImageView
+                    android:id="@+id/tu5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/tu4"
+                    android:src="@mipmap/tu5" />
+
+                <ImageView
+                    android:id="@+id/tu6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text3"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/tu5"
+                    android:src="@mipmap/tu6" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableTop="@mipmap/shouye"
+                    android:text="首页"
+                    android:textColor="#2FD2D0"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableTop="@mipmap/gouwuche"
+                    android:text="购物车"
+                    android:textColor="#898E92"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="69dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableTop="@mipmap/dingdan"
+                    android:text="订单"
+                    android:textColor="#898E92"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableTop="@mipmap/zaixiankefu"
+                    android:text="在线客服"
+                    android:textColor="#898E92"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
