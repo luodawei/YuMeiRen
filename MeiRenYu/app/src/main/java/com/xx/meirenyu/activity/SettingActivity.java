@@ -38,6 +38,7 @@ public class SettingActivity extends Activity {
     TextView settingBackBtn;//返回按钮
     TextView setWeiBoBtn;//微博绑定按钮
     TextView aboutUsBtn;//关于我们跳转按钮
+    TextView changePasswordBtn;//修改密码按钮
     Intent intent;//跳转意图
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class SettingActivity extends Activity {
         settingBackBtn= (TextView) findViewById(R.id.search_back_btn);
         setWeiBoBtn= (TextView) findViewById(R.id.set_weiBo_btn);
         aboutUsBtn= (TextView) findViewById(R.id.about_us_btn);
+        changePasswordBtn= (TextView) findViewById(R.id.change_password_btn);
         //设置监听
         fontsetting.setOnClickListener(onClickListener);
         exitText.setOnClickListener(onClickListener);
@@ -58,6 +60,7 @@ public class SettingActivity extends Activity {
         settingBackBtn.setOnClickListener(onClickListener);
         setWeiBoBtn.setOnClickListener(onClickListener);
         aboutUsBtn.setOnClickListener(onClickListener);
+        changePasswordBtn.setOnClickListener(onClickListener);
     }
     //创建ClearDialog方法
     public void createClearDialog(){
@@ -208,7 +211,13 @@ public class SettingActivity extends Activity {
                     startActivity(intent);
                     break;
                 case R.id.about_us_btn:
+                    /*关于我们*/
                     intent=new Intent(SettingActivity.this,AboutUsActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.change_password_btn:
+                    /*修改密码*/
+                    intent=new Intent(SettingActivity.this,ChangePasswordActivity.class);
                     startActivity(intent);
                     break;
             }
