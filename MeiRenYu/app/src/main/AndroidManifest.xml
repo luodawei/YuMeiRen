@@ -29,6 +29,8 @@
         <activity android:name="com.xx.meirenyu.activity.AboutUsActivity"/><!--关于我们页面-->
         <activity android:name="com.xx.meirenyu.activity.ChatPageActivity"/><!--好友聊天页面-->
         <activity android:name="com.xx.meirenyu.activity.AlreadyLogInActivity"/><!--登录完成页面-->
+        <activity android:name="com.xx.meirenyu.activity.ShopCartJieSuanAvtivity"/>//购物车结算
+        <activity android:name="com.xx.meirenyu.activity.ChangePasswordActivity"/><!--修改密码页面-->
 
     </application>
 </manifest>
