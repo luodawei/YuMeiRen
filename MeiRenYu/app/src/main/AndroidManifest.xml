@@ -40,5 +40,7 @@
         <activity android:name="com.xx.meirenyu.activity.YogaWoDeTieZiActivity"/><!--我的帖子-->
         <activity android:name="com.xx.meirenyu.activity.YogaMyCollectionLvActivity"/><!--我的收藏-->
         <activity android:name="com.xx.meirenyu.activity.PushAboutAppLvActivity"/><!--相关推荐-->
+        <activity android:name="com.xx.meirenyu.activity.JuBaoActivity"/><!--举报-->
+        <activity android:name="com.xx.meirenyu.activity.JuBaoSuccesedActivity"/><!--举报成功-->
     </application>
 </manifest>
