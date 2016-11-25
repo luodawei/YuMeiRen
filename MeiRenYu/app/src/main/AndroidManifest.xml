@@ -31,6 +31,9 @@
         <activity android:name="com.xx.meirenyu.activity.AlreadyLogInActivity"/><!--登录完成页面-->
         <activity android:name="com.xx.meirenyu.activity.ShopCartJieSuanAvtivity"/>//购物车结算
         <activity android:name="com.xx.meirenyu.activity.ChangePasswordActivity"/><!--修改密码页面-->
-
+        <activity android:name="com.xx.meirenyu.activity.YogaShopActivity"/><!--商城首页-->
+        <activity android:name="com.xx.meirenyu.activity.PushAboutAppLvActivity"/><!--相关推荐-->
+        <activity android:name="com.xx.meirenyu.activity.YogaWoDeTieZiActivity"/><!--我的帖子-->
+        <activity android:name="com.xx.meirenyu.activity.YogaMyCollectionLvActivity"/><!--我的收藏-->
     </application>
 </manifest>
