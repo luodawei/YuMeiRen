@@ -6,13 +6,13 @@ import android.os.Bundle;
 import com.yss.yumeiren.R;
 
 /**
- * Created by Administrator on 2016/11/16.
- * 购物车结算
+ * 建议页面
+ * Created by Administrator on 2016/11/25.
  */
-public class ShopCartJieSuanAvtivity extends Activity {
+public class SuggestionActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop_cart_jiesuan);
+        setContentView(R.layout.activity_suggestion);
     }
 }

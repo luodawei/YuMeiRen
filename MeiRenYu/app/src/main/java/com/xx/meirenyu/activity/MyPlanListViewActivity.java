@@ -19,50 +19,52 @@ import java.util.List;
  */
 
 public class MyPlanListViewActivity extends Activity {
-    List<HashMap<String,Object>> list;
+    List<HashMap<String, Object>> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_plan_lv);
-        ListView listView = (ListView)findViewById(R.id.my_plan_list);
+        ListView listView = (ListView) findViewById(R.id.my_plan_list);
         listView.setAdapter(new MyPlanAdapter(this));
         listView.setOnItemClickListener(onItemClickListener);
     }
+
     AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent intent;
-            switch (position){
+            switch (position) {
                 case 0:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 1:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 2:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 3:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 4:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 5:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 6:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
                 case 7:
-                    intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                    intent = new Intent(MyPlanListViewActivity.this, MyPlanDetailActivity.class);
                     startActivity(intent);
                     break;
             }
