@@ -7,13 +7,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.xx.meirenyu.activity.MainActivity">
+        <activity android:name="com.xx.meirenyu.activity.GoodsDetailaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.xx.meirenyu.activity.GoodsDetailaActivity"/>//购物详情页面
+        <!--<activity android:name="com.xx.meirenyu.activity.GoodsDetailaActivity"/>//购物详情页面-->
         <activity android:name="com.xx.meirenyu.activity.SettingActivity"/>//设置页面
         <activity android:name="com.xx.meirenyu.activity.OnlineServiceActivity"/>//客服页面
         <activity android:name="com.xx.meirenyu.activity.GoodsSearchActivity"/>商品搜索页面
