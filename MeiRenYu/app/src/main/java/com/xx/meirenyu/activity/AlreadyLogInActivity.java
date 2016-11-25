@@ -56,6 +56,11 @@ public class AlreadyLogInActivity extends Activity {
         integralLayout.setOnClickListener(onClickListener);
         menuBottom.setOnCheckedChangeListener(getOnCheckedChangeListener());
     }
+
+    /**
+     * RadioGroup监听
+     * @return
+     */
     private RadioGroup.OnCheckedChangeListener getOnCheckedChangeListener(){
         RadioGroup.OnCheckedChangeListener onCheckedChangeListener = new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -69,6 +74,8 @@ public class AlreadyLogInActivity extends Activity {
                     case R.id.rd_btn_pool:
                         break;
                     case R.id.rd_btn_shop:
+                        intent = new Intent(AlreadyLogInActivity.this,YogaShopActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.rd_btn_mine:
                         break;
