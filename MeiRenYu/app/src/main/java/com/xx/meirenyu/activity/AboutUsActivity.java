@@ -18,15 +18,16 @@ public class AboutUsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        btnBack= (ImageView) findViewById(R.id.btn_back);
+        btnBack = (ImageView) findViewById(R.id.btn_back);
 
         //设置监听
         btnBack.setOnClickListener(onClickListener);
     }
-    View.OnClickListener onClickListener =new View.OnClickListener() {
+
+    View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            switch (v.getId()){
+            switch (v.getId()) {
                 case R.id.btn_back:
                 /*返回按钮监听事件，直接 finish()*/
                     finish();

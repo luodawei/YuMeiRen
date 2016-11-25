@@ -22,15 +22,16 @@
                 android:layout_marginTop="13dp"
                 android:layout_marginBottom="13dp"/>
             <TextView
+                android:id="@+id/shop_cart_editing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bianji"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginBottom="13dp"/>
+                android:paddingTop="13dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="13dp"/>
         </RelativeLayout>
 
         <LinearLayout 
@@ -203,6 +204,7 @@
             android:layout_alignParentBottom="true"
             >
             <TextView
+                android:id="@+id/shouye"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -215,6 +217,7 @@
                 android:paddingBottom="4dp"
                 />
             <TextView
+                android:id="@+id/gouwuche"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -227,6 +230,7 @@
                 android:paddingBottom="4dp"
                 />
             <TextView
+                android:id="@+id/dingdan"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -239,6 +243,7 @@
                 android:paddingBottom="4dp"
                 />
             <TextView
+                android:id="@+id/zaixiankefu"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

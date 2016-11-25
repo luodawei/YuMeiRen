@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.yss.yumeiren.R;
 
 /**
+ * 建议页面
  * Created by Administrator on 2016/11/25.
  */
 public class SuggestionActivity extends Activity {

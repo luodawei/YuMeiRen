@@ -13,6 +13,7 @@
             android:layout_height="wrap_content"
             android:background="@color/meirenyu_bg_green">
             <ImageView
+                android:id="@+id/fanhui"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/fanhui"
@@ -35,6 +36,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:id="@+id/quanbu"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -46,6 +48,7 @@
                 android:paddingBottom="8dp"
                 />
             <TextView
+                android:id="@+id/daifukuan"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,6 +60,7 @@
                 android:paddingBottom="8dp"
                 />
             <TextView
+                android:id="@+id/daifahuo"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -68,6 +72,7 @@
                 android:paddingBottom="8dp"
                 />
             <TextView
+                android:id="@+id/daishouhuo"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -311,6 +316,7 @@
             android:gravity="bottom"
             >
             <TextView
+                android:id="@+id/shouye"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -323,6 +329,7 @@
                 android:paddingBottom="4dp"
                 />
             <TextView
+                android:id="@+id/gouwuche"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -335,6 +342,7 @@
                 android:paddingBottom="4dp"
                 />
             <TextView
+                android:id="@+id/dingdan"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -347,6 +355,7 @@
                 android:paddingBottom="4dp"
                 />
             <TextView
+                android:id="@+id/zaixiankefu"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

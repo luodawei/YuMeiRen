@@ -16,6 +16,7 @@ import com.yss.yumeiren.R;
 public class SetLoginActivity extends Activity {
     TextView btnLogin;
     TextView btnRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,16 +26,17 @@ public class SetLoginActivity extends Activity {
         btnLogin.setOnClickListener(onClickListener);
         btnRegister.setOnClickListener(onClickListener);
     }
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            switch (v.getId()){
+            switch (v.getId()) {
                 case R.id.btn_login:
-                    Intent intent = new Intent(SetLoginActivity.this,AlreadyLogInActivity.class);
+                    Intent intent = new Intent(SetLoginActivity.this, AlreadyLogInActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.btn_register:
-                    Intent intent1 = new Intent(SetLoginActivity.this,SetRegisterActivity.class);
+                    Intent intent1 = new Intent(SetLoginActivity.this, SetRegisterActivity.class);
                     startActivity(intent1);
                     break;
             }
