@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             android:text="2016-11-26"
             android:layout_toRightOf="@+id/user_portrait"
-            android:layout_alignBottom="@+id/user_portrait"/>
+            android:layout_alignBottom="@+id/user_portrait"
+            android:layout_margin="5dp"/>
         <TextView
             android:id="@+id/post_content"
             android:layout_width="match_parent"
