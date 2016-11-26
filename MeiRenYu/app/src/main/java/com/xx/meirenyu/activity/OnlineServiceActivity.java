@@ -2,11 +2,11 @@ package com.xx.meirenyu.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
 import com.yss.yumeiren.R;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,11 +26,14 @@ public class OnlineServiceActivity extends Activity {
             "热门搜索",
             "初学者瑜伽服"
     };
-
+    ImageView search_back_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_online_service_lv);
+        search_back_btn = (ImageView) findViewById(R.id.search_back_btn);
+        search_back_btn.setOnClickListener(onClickListener);
+
         List<HashMap<String, Object>> list = getMessageDate();
         ListView serviceMessageListView = (ListView) findViewById(R.id.servicer_listview);
         if (isServicer) {
@@ -50,7 +53,16 @@ public class OnlineServiceActivity extends Activity {
         }
 
     }
-
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+         switch (v.getId()){
+             case R.id.search_back_btn:
+                 finish();
+                 break;
+         }
+        }
+    };
     List<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
 
     public List<HashMap<String, Object>> getMessageDate() {

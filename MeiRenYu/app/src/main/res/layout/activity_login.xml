@@ -310,7 +310,7 @@
             android:gravity="center_horizontal"
             android:text="@string/the_pool"
             android:textColor="@color/light_gray"
-            android:drawableTop="@mipmap/the_pool"
+            android:drawableTop="@mipmap/thepool"
             android:drawablePadding="3dp"/>
         <RadioButton
             android:paddingTop="5dp"
@@ -332,7 +332,7 @@
             android:gravity="center_horizontal"
             android:text="@string/mine"
             android:textColor="@color/main_blue"
-            android:drawableTop="@mipmap/mine"
+            android:drawableTop="@mipmap/wode_green"
             android:drawablePadding="3dp"/>
     </RadioGroup>
 </LinearLayout>
