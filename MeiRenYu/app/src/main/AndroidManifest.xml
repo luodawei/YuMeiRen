@@ -43,5 +43,7 @@
         <activity android:name="com.xx.meirenyu.activity.JuBaoActivity"/><!--举报-->
         <activity android:name="com.xx.meirenyu.activity.JuBaoSuccesedActivity"/><!--举报成功-->
         <activity android:name="com.xx.meirenyu.activity.AppUpdateActivity"/><!--APP更新页面-->
+        <activity android:name="com.xx.meirenyu.activity.FansActivity"/><!--粉丝页面-->
+        <activity android:name="com.xx.meirenyu.activity.MyGuanZhuActivity"/><!--我的关注页面-->
     </application>
 </manifest>

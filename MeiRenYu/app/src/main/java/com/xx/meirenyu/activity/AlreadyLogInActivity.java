@@ -42,7 +42,7 @@ public class AlreadyLogInActivity extends Activity {
 
         btnSetting = (ImageView) findViewById(R.id.btn_setting);
 
-        menuBottom = (RadioGroup) findViewById(R.id.menu_buttom);
+        //menuBottom = (RadioGroup) findViewById(R.id.menu_buttom);
 
         myFriendLayout.setOnClickListener(onClickListener);
         myPlanLayout.setOnClickListener(onClickListener);
@@ -54,14 +54,14 @@ public class AlreadyLogInActivity extends Activity {
         attentionLayout.setOnClickListener(onClickListener);
         fansLayout.setOnClickListener(onClickListener);
         integralLayout.setOnClickListener(onClickListener);
-        menuBottom.setOnCheckedChangeListener(getOnCheckedChangeListener());
+        //menuBottom.setOnCheckedChangeListener(getOnCheckedChangeListener());
     }
 
     /**
      * RadioGroup监听
      * @return
      */
-    private RadioGroup.OnCheckedChangeListener getOnCheckedChangeListener(){
+   /* private RadioGroup.OnCheckedChangeListener getOnCheckedChangeListener(){
         RadioGroup.OnCheckedChangeListener onCheckedChangeListener = new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -83,43 +83,56 @@ public class AlreadyLogInActivity extends Activity {
             }
         };
         return onCheckedChangeListener;
-    }
+    }*/
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.my_friend_layout:
+                    //我的好友
                     Intent intent = new Intent(AlreadyLogInActivity.this,MyFriendsActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.my_plan_layout:
+                    //我的计划
                     Intent intent1 = new Intent(AlreadyLogInActivity.this,MyPlanListViewActivity.class);
                     startActivity(intent1);
                     break;
                 case R.id.my_post_layout:
+                    //瑜伽我的帖子
                     Intent intent2 = new Intent(AlreadyLogInActivity.this,YogaWoDeTieZiActivity.class);
                     startActivity(intent2);
                     break;
                 case R.id.my_collection_layout:
+                    //我的收藏
                     Intent intent3 = new Intent(AlreadyLogInActivity.this,YogaMyCollectionLvActivity.class);
                     startActivity(intent3);
                     break;
                 case R.id.relative_recommend_layout:
-                    Intent intent4 = new Intent(AlreadyLogInActivity.this,PushAboutAppLvActivity.class);
+                    //订单
+                    Intent intent4 = new Intent(AlreadyLogInActivity.this,MyOrderActivity.class);
                     startActivity(intent4);
                     break;
                 case R.id.share_app_layout:
+                    //分享APP
                     Intent intent5 = new Intent(AlreadyLogInActivity.this,ShareAppActivity.class);
                     startActivity(intent5);
                     break;
                 case R.id.btn_setting:
+                    //设置
                     Intent intent6 = new Intent(AlreadyLogInActivity.this,SettingActivity.class);
                     startActivity(intent6);
                     break;
                 case R.id.attention_layout:
+                    //关注
+                    Intent intent7 = new Intent(AlreadyLogInActivity.this,MyGuanZhuActivity.class);
+                    startActivity(intent7);
                     break;
                 case R.id.fans_layout:
+                    //我的粉丝
+                    Intent intent8 = new Intent(AlreadyLogInActivity.this,FansActivity.class);
+                    startActivity(intent8);
                     break;
                 case R.id.integral_layout:
                     break;
