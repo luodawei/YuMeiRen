@@ -31,12 +31,13 @@
                 android:layout_marginTop="13dp"
                 android:layout_marginBottom="13dp"/>
         </RelativeLayout>
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
+            <RadioButton
                 android:id="@+id/quanbu"
+                android:button="@null"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -47,8 +48,9 @@
                 android:paddingTop="9dp"
                 android:paddingBottom="8dp"
                 />
-            <TextView
+            <RadioButton
                 android:id="@+id/daifukuan"
+                android:button="@null"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -59,8 +61,9 @@
                 android:paddingTop="9dp"
                 android:paddingBottom="8dp"
                 />
-            <TextView
+            <RadioButton
                 android:id="@+id/daifahuo"
+                android:button="@null"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -71,8 +74,9 @@
                 android:paddingTop="9dp"
                 android:paddingBottom="8dp"
                 />
-            <TextView
+            <RadioButton
                 android:id="@+id/daishouhuo"
+                android:button="@null"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -83,29 +87,33 @@
                 android:paddingTop="9dp"
                 android:paddingBottom="8dp"
                 />
-            </LinearLayout>
+            </RadioGroup>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <View
+                android:id="@+id/quanbu_view"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:background="@color/meirenyu_bg_green"/>
             <View
+                android:id="@+id/daifukuan_view"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:background="@color/meirenyu_bg_green"
                 android:visibility="invisible"/>
             <View
+                android:id="@+id/daifahuo_view"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:background="@color/meirenyu_bg_green"
                 android:visibility="invisible"/>
             <View
+                android:id="@+id/daishouhuo_view"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
