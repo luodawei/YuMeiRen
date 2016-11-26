@@ -1,9 +1,14 @@
 package com.xx.meirenyu.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import com.xx.meirenyu.utill.adapter.FansListViewAdapter;
 import com.xx.meirenyu.utill.model.FansItemModel;
 import com.yss.yumeiren.R;
@@ -25,6 +30,9 @@ public class FansActivity extends Activity{
         List<FansItemModel> list=getFansData();
         FansListViewAdapter fansListViewAdapter=new FansListViewAdapter(this,list);
         fansListView.setAdapter(fansListViewAdapter);
+        fansListView.setOnItemClickListener(onItemClickListener);
+        //返回按钮点击事件
+        backBtn.setOnClickListener(onClickListener);
     }
     List<FansItemModel> list=new ArrayList<FansItemModel>();
     //获取数据
@@ -50,4 +58,27 @@ public class FansActivity extends Activity{
         }
         return list;
     }
+    //listView的监听
+    ListView.OnItemClickListener onItemClickListener=new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            switch (parent.getId()){
+                case R.id.fans_lv:
+                    //带你listview的子项跳转
+                    Toast.makeText(FansActivity.this,"粉丝"+position,Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+    };
+    View.OnClickListener onClickListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.back_btn:
+                /*返回按钮*/
+                finish();
+            break;
+        }
+        }
+    };
 }

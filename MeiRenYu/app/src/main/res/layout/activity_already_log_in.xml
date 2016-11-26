@@ -146,12 +146,7 @@
                 android:padding="8dp"
                 android:layout_marginRight="18dp"/>
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/light_gray"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"/>
+
         <LinearLayout
             android:id="@+id/my_collection_layout"
             android:layout_width="match_parent"
@@ -176,6 +171,14 @@
                 android:padding="8dp"
                 android:layout_marginRight="18dp"/>
         </LinearLayout>
+
+      <!--  <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"/>-->
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
@@ -251,7 +254,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/relative_recommend"
+                android:src="@mipmap/dingdan2"
                 android:paddingLeft="12dp" />
             <TextView
                 android:layout_width="0dp"
@@ -302,59 +305,4 @@
             android:background="@color/gray_white"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
-    <RadioGroup
-        android:id="@+id/menu_buttom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#F1F6F9">
-        <RadioButton
-            android:id="@+id/rd_btn_home"
-            android:paddingTop="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:gravity="center_horizontal"
-            android:text="@string/home_page"
-            android:textColor="@color/light_gray"
-            android:drawableTop="@mipmap/home_page"
-            android:drawablePadding="3dp"/>
-        <RadioButton
-            android:id="@+id/rd_btn_pool"
-            android:paddingTop="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:gravity="center_horizontal"
-            android:text="@string/the_pool"
-            android:textColor="@color/light_gray"
-            android:drawableTop="@mipmap/thepool"
-            android:drawablePadding="3dp"/>
-        <RadioButton
-            android:id="@+id/rd_btn_shop"
-            android:paddingTop="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:gravity="center_horizontal"
-            android:text="@string/shop"
-            android:textColor="@color/light_gray"
-            android:drawableTop="@mipmap/shop"
-            android:drawablePadding="3dp"/>
-        <RadioButton
-            android:id="@+id/rd_btn_mine"
-            android:paddingTop="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:gravity="center_horizontal"
-            android:text="@string/mine"
-            android:textColor="@color/main_blue"
-            android:drawableTop="@mipmap/wode_green"
-            android:drawablePadding="3dp"/>
-    </RadioGroup>
 </LinearLayout>
