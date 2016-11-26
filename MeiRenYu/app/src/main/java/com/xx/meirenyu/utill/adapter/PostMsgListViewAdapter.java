@@ -11,10 +11,10 @@ import com.yss.yumeiren.R;
 /**
  * Created by Administrator on 2016/11/26.
  */
-public class YuChiListViewAdapter extends BaseAdapter {
+public class PostMsgListViewAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
-    public YuChiListViewAdapter(Context context){
+    public PostMsgListViewAdapter(Context context){
         this.context = context;
         inflater = LayoutInflater.from(context);
     }
@@ -36,7 +36,7 @@ public class YuChiListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){
-            convertView = inflater.inflate(R.layout.yu_chi_lv_item,null);
+            convertView = inflater.inflate(R.layout.post_a_msg_item,null);
         }
         return convertView;
     }

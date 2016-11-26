@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.xx.meirenyu.utill.adapter.YuChiListViewAdapter;
+import com.xx.meirenyu.utill.adapter.PostMsgListViewAdapter;
 import com.yss.yumeiren.R;
 
 /**
@@ -24,16 +24,16 @@ public class YuChiLvActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yu_chi_lv);
+        setContentView(R.layout.activity_post_a_msg_lv);
         yuChiListView = (ListView) findViewById(R.id.yu_chi_list_view);
         btnMenu = (ImageView) findViewById(R.id.btn_menu);
-        yuChiListView.setAdapter(new YuChiListViewAdapter(this));
+        yuChiListView.setAdapter(new PostMsgListViewAdapter(this));
 
         createPopupWindow();
         btnMenu.setOnClickListener(getOnClickListener());
     }
     public void createPopupWindow(){
-        View popupView = getLayoutInflater().inflate(R.layout.yu_chi_popub_view,null);
+        View popupView = getLayoutInflater().inflate(R.layout.post_a_msg_popub_view,null);
         TextView btnHost = (TextView) popupView.findViewById(R.id.btn_only_see_host);
         TextView btnShare = (TextView) popupView.findViewById(R.id.btn_share);
         TextView btnAddToBlacklist = (TextView) popupView.findViewById(R.id.btn_add_to_blacklist);

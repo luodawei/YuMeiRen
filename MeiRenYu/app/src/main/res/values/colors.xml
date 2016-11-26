@@ -32,4 +32,5 @@
     <color name="reply_menu_icon_color">#999999</color>
     <color name="comment_color_blue">#009AFE</color>
     <color name="bg_yu_chi_popup_view">#88000000</color>
+    <color name="orange">#ed9300</color>
 </resources>
