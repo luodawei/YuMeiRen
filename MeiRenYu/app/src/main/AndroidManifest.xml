@@ -8,7 +8,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.xx.meirenyu.activity.MainActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.xx.meirenyu.activity.GoodsDetailaActivity"/>//购物详情页面
         <activity android:name="com.xx.meirenyu.activity.SettingActivity"/>//设置页面
@@ -37,11 +40,7 @@
         <activity android:name="com.xx.meirenyu.activity.YogaWoDeTieZiActivity"/><!--我的帖子-->
         <activity android:name="com.xx.meirenyu.activity.YogaMyCollectionLvActivity"/><!--我的收藏-->
         <activity android:name="com.xx.meirenyu.activity.PushAboutAppLvActivity"/><!--相关推荐-->
-        <activity android:name="com.xx.meirenyu.activity.YuChiLvActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="com.xx.meirenyu.activity.JuBaoActivity"/><!--举报-->
+        <activity android:name="com.xx.meirenyu.activity.JuBaoSuccesedActivity"/><!--举报成功-->
     </application>
 </manifest>
