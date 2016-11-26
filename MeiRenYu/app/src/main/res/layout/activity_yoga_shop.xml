@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="#ffff"
     android:orientation="vertical">
+    <!--导航栏-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,9 +53,10 @@
             </LinearLayout>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="8dp"
                 android:background="@mipmap/shousuo"
                 android:drawableLeft="@mipmap/cazao"
@@ -229,7 +231,6 @@
             android:textColor="#2FD2D0"
             android:textSize="11sp"
             android:gravity="center_horizontal"/>
-
         <TextView
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -240,7 +241,8 @@
             android:text="购物车"
             android:textColor="#898E92"
             android:textSize="11sp"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal"
+            android:id="@+id/textView4" />
         <TextView
             android:layout_weight="1"
             android:layout_width="0dp"
