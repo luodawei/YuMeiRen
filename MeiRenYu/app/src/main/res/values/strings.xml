@@ -37,7 +37,7 @@
     <string name="gouwuche">购物车</string>
     <string name="zaixiankefu">在线客服</string>
     <string name="app_shop">美人域商城</string>
-
+    <string name="jubao">举报</string>
 
     <string name="kugouyinyue">酷狗音乐</string>
     <string name="yingyinshiting">影音视听 | 32.7M</string>
@@ -116,5 +116,9 @@
     <string name="chat_content">你的八块腹肌练得怎么样了</string>
     <string name="chat_friend">异域至尊</string>
     <string name="send">发送</string>
+    <string name="jubao_type_other">其他</string>
+    <string name="jubao_type_qinquan">侵权</string>
+    <string name="jubao_type_qizha">欺诈</string>
+    <string name="jubao_type_saorao">广告骚扰</string>
 
 </resources>
