@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.xx.meirenyu.activity.MainActivity">
+        <activity android:name="com.xx.meirenyu.activity.YogaShopActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -36,7 +36,6 @@
         <activity android:name="com.xx.meirenyu.activity.ShopCartQingKongActivity"/>//商城清空页面
         <activity android:name="com.xx.meirenyu.activity.ShopCartKongBaiActivity"/>//商城空白页面
         <activity android:name="com.xx.meirenyu.activity.SuggestionActivity"/>//商城建议页面
-        <activity android:name="com.xx.meirenyu.activity.YogaShopActivity"/><!--商城首页-->
         <activity android:name="com.xx.meirenyu.activity.YogaWoDeTieZiActivity"/><!--我的帖子-->
         <activity android:name="com.xx.meirenyu.activity.YogaMyCollectionLvActivity"/><!--我的收藏-->
         <activity android:name="com.xx.meirenyu.activity.PushAboutAppLvActivity"/><!--相关推荐-->

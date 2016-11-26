@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yss.yumeiren.R;
@@ -13,10 +14,7 @@ import com.yss.yumeiren.R;
  * Created by Administrator on 2016/11/25.
  */
 public class ShopCartQingKongActivity extends Activity {
-    TextView shouye;
-    TextView gouwuche;
-    TextView dingdan;
-    TextView zaixiankefu;
+    ImageView fanhui;
     TextView shop_cart_empty;
 
     @Override
@@ -24,15 +22,9 @@ public class ShopCartQingKongActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_cart_qingkong);
         shop_cart_empty = (TextView) findViewById(R.id.shop_cart_empty);
-        shouye = (TextView) findViewById(R.id.shouye);
-        gouwuche = (TextView) findViewById(R.id.gouwuche);
-        dingdan = (TextView) findViewById(R.id.dingdan);
-        zaixiankefu = (TextView) findViewById(R.id.zaixiankefu);
+        fanhui = (ImageView) findViewById(R.id.fanhui);
 
-        shouye.setOnClickListener(onClickListener);
-        gouwuche.setOnClickListener(onClickListener);
-        dingdan.setOnClickListener(onClickListener);
-        zaixiankefu.setOnClickListener(onClickListener);
+        fanhui.setOnClickListener(onClickListener);
         shop_cart_empty.setOnClickListener(onClickListener);
 
     }
@@ -41,17 +33,8 @@ public class ShopCartQingKongActivity extends Activity {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.shouye:
-                    break;
-                case R.id.gouwuche:
-                    break;
-                case R.id.dingdan:
-                    intent = new Intent(ShopCartQingKongActivity.this, MyOrderActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.zaixiankefu:
-                    intent = new Intent(ShopCartQingKongActivity.this, OnlineServiceActivity.class);
-                    startActivity(intent);
+                case R.id.fanhui:
+                    finish();
                     break;
                 case R.id.shop_cart_empty:
                     intent = new Intent(ShopCartQingKongActivity.this, ShopCartKongBaiActivity.class);

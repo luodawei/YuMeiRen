@@ -8,101 +8,117 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
+
         <RelativeLayout
             android:id="@+id/jiesuan_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/meirenyu_bg_green">
+
+            <ImageView
+                android:id="@+id/fanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@mipmap/fanhui" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/gouwu_che"
-                android:textSize="18sp"
-                android:textColor="@color/white"
                 android:layout_centerInParent="true"
+                android:layout_marginBottom="13dp"
                 android:layout_marginTop="13dp"
-                android:layout_marginBottom="13dp"/>
+                android:text="@string/gouwu_che"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
             <TextView
                 android:id="@+id/shop_cart_empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/qingkong"
-                android:textSize="18sp"
-                android:textColor="@color/white"
                 android:layout_alignParentRight="true"
-                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
                 android:paddingRight="12dp"
-                android:paddingBottom="13dp"/>
+                android:paddingTop="13dp"
+                android:text="@string/qingkong"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/diyipai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@id/jiesuan_top"
             android:background="@color/jiesuan_bg_grey"
-            >
+            android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@mipmap/shanchu_green"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/shanchu_green" />
+
             <ImageView
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="6dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/gouwuche_jiesuan01"
-                />
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/gouwuche_jiesuan01" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/jiesuanjieshao01"
                     android:textColor="@color/textcolor"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+
                 <TextView
-                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:text="@string/jiesuanguige01"
                     android:textColor="@color/textcolor"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp"
                     android:gravity="bottom"
-                    android:layout_marginBottom="6dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jiege"
-                        android:textSize="15dp"
-                        android:textColor="@color/textcolor"/>
+                        android:textColor="@color/textcolor"
+                        android:textSize="15dp" />
+
                     <TextView
-                        android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="52"
                         android:textColor="@color/red"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/shanchu"
-                        android:textSize="15dp"
-                        android:textColor="@color/textcolor"
                         android:layout_marginRight="6dp"
-                        />
+                        android:text="@string/shanchu"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15dp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -113,71 +129,77 @@
             android:id="@+id/dierpai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@id/diyipai"
-            android:background="@color/jiesuan_bg_grey"
             android:layout_marginTop="2dp"
-            >
+            android:background="@color/jiesuan_bg_grey"
+            android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@mipmap/shanchu_white"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/shanchu_white" />
+
             <ImageView
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="6dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/gouwuche_jiesuan02"
-                />
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/gouwuche_jiesuan02" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/jiesuanjieshao02"
                     android:textColor="@color/textcolor"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+
                 <TextView
-                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:text="@string/jiesuanguige02"
                     android:textColor="@color/textcolor"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp"
                     android:gravity="bottom"
-                    android:layout_marginBottom="6dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jiege"
-                        android:textSize="15dp"
-                        android:textColor="@color/textcolor"/>
+                        android:textColor="@color/textcolor"
+                        android:textSize="15dp" />
+
                     <TextView
-                        android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="98"
                         android:textColor="@color/red"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/shanchu"
-                        android:textSize="15dp"
-                        android:textColor="@color/textcolor"
                         android:layout_marginRight="6dp"
-                        />
+                        android:text="@string/shanchu"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15dp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -185,90 +207,31 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_below="@id/dierpai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
+            android:layout_below="@id/dierpai"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
-            android:background="@mipmap/jiesuankuang">
+            android:background="@mipmap/jiesuankuang"
+            android:gravity="center"
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/jiesuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/jiesuan"
-                android:textSize="15dp"
                 android:textColor="@color/white"
-                />
+                android:textSize="15dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="150"
-                android:textSize="15dp"
                 android:textColor="@color/red"
-                />
+                android:textSize="15dp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            >
-            <TextView
-                android:id="@+id/shouye"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/shuo_ye"
-                android:drawableTop="@mipmap/shouye_white"
-                android:gravity="center_horizontal"
-                android:textColor="@color/textcolor"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-            <TextView
-                android:id="@+id/gouwuche"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/gouwu_che"
-                android:drawableTop="@mipmap/gouwuche_green"
-                android:gravity="center_horizontal"
-                android:textColor="@color/meirenyu_bg_green"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-            <TextView
-                android:id="@+id/dingdan"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/ding_dan"
-                android:drawableTop="@mipmap/dingdan"
-                android:gravity="center_horizontal"
-                android:textColor="@color/textcolor"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-            <TextView
-                android:id="@+id/zaixiankefu"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/zaixiankefu"
-                android:drawableTop="@mipmap/zaixiankefu"
-                android:gravity="center_horizontal"
-                android:textColor="@color/textcolor"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-        </LinearLayout>
 
     </RelativeLayout>
 
