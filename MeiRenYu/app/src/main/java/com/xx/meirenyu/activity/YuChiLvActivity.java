@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.xx.meirenyu.utill.adapter.YuChiListViewAdapter;
+import com.xx.meirenyu.utill.adapter.PostMsgListViewAdapter;
 import com.yss.yumeiren.R;
 
 /**
@@ -27,7 +27,7 @@ public class YuChiLvActivity extends Activity {
         setContentView(R.layout.activity_post_a_msg_lv);
         yuChiListView = (ListView) findViewById(R.id.yu_chi_list_view);
         btnMenu = (ImageView) findViewById(R.id.btn_menu);
-        yuChiListView.setAdapter(new YuChiListViewAdapter(this));
+        yuChiListView.setAdapter(new PostMsgListViewAdapter(this));
 
         createPopupWindow();
         btnMenu.setOnClickListener(getOnClickListener());
