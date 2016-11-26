@@ -28,4 +28,7 @@
     <color name="main_blue">#2FD2D1</color>
     <color name="light_gray">#B5B5B5</color>
     <color name="gray_white">#D1D1D1</color>
+    <color name="bg_reply_menu">#F5F5F5</color>
+    <color name="reply_menu_icon_color">#999999</color>
+    <color name="comment_color_blue">#009AFE</color>
 </resources>
