@@ -49,7 +49,7 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:src="@mipmap/jubao_succesed"/>
+            android:src="@mipmap/jubaosuccesed"/>
         <RelativeLayout
             android:layout_weight="1.3"
             android:layout_width="match_parent"
