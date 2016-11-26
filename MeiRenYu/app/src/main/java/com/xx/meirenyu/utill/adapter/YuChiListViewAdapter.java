@@ -36,7 +36,7 @@ public class YuChiListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){
-            convertView = inflater.inflate(R.layout.yu_chi_lv_item,null);
+            convertView = inflater.inflate(R.layout.post_a_msg_item,null);
         }
         return convertView;
     }

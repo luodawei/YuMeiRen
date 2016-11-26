@@ -120,5 +120,7 @@
     <string name="jubao_type_qinquan">侵权</string>
     <string name="jubao_type_qizha">欺诈</string>
     <string name="jubao_type_saorao">广告骚扰</string>
+    <string name="fujin">附近</string>
+    <string name="zuixin">最新</string>
 
 </resources>

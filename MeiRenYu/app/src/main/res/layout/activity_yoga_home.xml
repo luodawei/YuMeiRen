@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/yoga_home_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/yoga_home_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/the_pool"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/jiesuan_bg_grey"
+            android:button="@null"
+            android:drawableTop="@mipmap/thepool"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/the_pool"
+            android:textColor="@color/textcolor" />
+
+        <RadioButton
+            android:id="@+id/the_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/jiesuan_bg_grey"
+            android:button="@null"
+            android:drawableTop="@mipmap/shop_green"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/shop"
+            android:textColor="@color/meirenyu_bg_green" />
+
+        <RadioButton
+            android:id="@+id/the_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/jiesuan_bg_grey"
+            android:button="@null"
+            android:drawableTop="@mipmap/wode"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/mine"
+            android:textColor="@color/textcolor" />
+    </RadioGroup>
+</LinearLayout>
