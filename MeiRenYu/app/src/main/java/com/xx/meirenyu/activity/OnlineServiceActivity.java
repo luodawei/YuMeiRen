@@ -33,7 +33,6 @@ public class OnlineServiceActivity extends Activity {
         setContentView(R.layout.activity_online_service_lv);
         search_back_btn = (ImageView) findViewById(R.id.search_back_btn);
         search_back_btn.setOnClickListener(onClickListener);
-
         List<HashMap<String, Object>> list = getMessageDate();
         ListView serviceMessageListView = (ListView) findViewById(R.id.servicer_listview);
         if (isServicer) {
