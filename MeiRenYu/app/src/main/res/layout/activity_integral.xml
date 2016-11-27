@@ -2,128 +2,262 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@color/white"
-        >
+        android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/meirenyu_bg_green">
+
             <ImageView
+                android:id="@+id/fanhui"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/fanhui"
                 android:layout_centerVertical="true"
-                android:layout_marginTop="11dp"
+                android:layout_marginBottom="11dp"
                 android:layout_marginLeft="12dp"
-                android:layout_marginBottom="11dp"/>
+                android:layout_marginTop="11dp"
+                android:src="@mipmap/fanhui" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/jifen"
-                android:textSize="18sp"
-                android:textColor="@color/white"
                 android:layout_centerInParent="true"
+                android:layout_marginBottom="13dp"
                 android:layout_marginTop="13dp"
-                android:layout_marginBottom="13dp"/>
+                android:text="@string/jifen"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </RelativeLayout>
+
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
             android:layout_marginTop="12dp"
+            android:background="@color/grey" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/grey"
-            />
-        <TextView
-            android:layout_marginTop="227dp"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/grey"
-            />
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/grey"
-            />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/integral_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:padding="15dp"
+                android:src="@mipmap/integral_front" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2016-11-27"
+                android:textColor="@color/textcolor"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/integral_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/integral_next" />
+        </RelativeLayout>
+        <!--星期的布局-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tuiguangjifen"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
-            android:paddingLeft="17dp"
-            android:textColor="@color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1000"
-            android:textSize="12sp"
-            android:layout_marginLeft="12dp"
-            android:textColor="@color/meirenyu_bg_green"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fen"
-            android:textSize="12sp"
-            android:textColor="@color/meirenyu_bg_green"/>
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="日"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="一"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="二"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="三"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="四"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="五"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="六"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
         </LinearLayout>
+
+        <!--<GridView-->
+            <!--android:id="@+id/gv_sign_date"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:clickable="true"-->
+            <!--android:clipChildren="true"-->
+            <!--android:columnWidth="30dp"-->
+            <!--android:listSelector="@null"-->
+            <!--android:numColumns="7"-->
+            <!--android:paddingBottom="1dp"-->
+            <!--android:stretchMode="columnWidth"-->
+            <!--android:verticalSpacing="1dp">-->
+
+        <!--</GridView>-->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/grey"
-            />
+            android:background="@color/grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/grey" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/quanbujifen"
-                android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:paddingLeft="17dp"
-                android:textColor="@color/black"/>
+                android:paddingTop="16dp"
+                android:text="@string/tuiguangjifen"
+                android:textColor="@color/black" />
+
             <TextView
+                android:id="@+id/integral"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12000"
-                android:textSize="12sp"
                 android:layout_marginLeft="12dp"
-                android:textColor="@color/meirenyu_bg_green"/>
+                android:text="1000"
+                android:textColor="@color/meirenyu_bg_green"
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fen"
-                android:textSize="12sp"
-                android:textColor="@color/meirenyu_bg_green"/>
+                android:textColor="@color/meirenyu_bg_green"
+                android:textSize="12sp" />
         </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/grey"
-            />
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingLeft="17dp"
+                android:paddingTop="16dp"
+                android:text="@string/quanbujifen"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="12000"
+                android:textColor="@color/meirenyu_bg_green"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fen"
+                android:textColor="@color/meirenyu_bg_green"
+                android:textSize="12sp" />
+        </LinearLayout>
+
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/integral_in_gifts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/jifen_huanhaoli"
-            android:textSize="15sp"
-            android:layout_marginTop="68dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/pingjia"
+            android:paddingBottom="8dp"
             android:paddingLeft="38dp"
             android:paddingRight="38dp"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:text="@string/jifen_huanhaoli"
             android:textColor="@color/white"
-            android:background="@drawable/pingjia"
-            android:layout_gravity="center_horizontal"
-            />
-
+            android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>
