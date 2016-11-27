@@ -45,6 +45,10 @@
         <activity android:name="com.xx.meirenyu.activity.AppUpdateActivity"/><!--APP更新页面-->
         <activity android:name="com.xx.meirenyu.activity.FansActivity"/><!--粉丝页面-->
         <activity android:name="com.xx.meirenyu.activity.MyGuanZhuActivity"/><!--我的关注页面-->
-        //瑜池附近
+        <activity android:name="com.xx.meirenyu.activity.PostShareActivity"/><!--分享到帖子圈-->
+        <activity android:name="com.xx.meirenyu.activity.PostActivity"/><!--发表帖子的页面-->
+        <activity android:name="com.xx.meirenyu.activity.YogaClothesActivity"/><!--瑜伽服-->
+        <activity android:name="com.xx.meirenyu.activity.YogaCushionActivity"/><!--瑜伽垫-->
+        <activity android:name="com.xx.meirenyu.activity.YogaOtherShopActivity"/><!--其他商品-->
     </application>
 </manifest>

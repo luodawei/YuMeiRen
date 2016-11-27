@@ -3,6 +3,7 @@ package com.xx.meirenyu.activity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import com.yss.yumeiren.R;
 /**
  * Created by Administrator on 2016/11/26.
  */
-public class YuChiLvActivity extends Activity {
+public class PostMsgLvActivity extends Activity {
     ImageView btnMenu;
     ListView yuChiListView;
     PopupWindow popupWindow;
@@ -55,6 +56,7 @@ public class YuChiLvActivity extends Activity {
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent;
                 switch (v.getId()){
                     case R.id.btn_menu:
                         popupWindow.showAsDropDown(v);
@@ -63,6 +65,8 @@ public class YuChiLvActivity extends Activity {
                         popupWindow.dismiss();
                         break;
                     case R.id.btn_share:
+                        intent = new Intent(PostMsgLvActivity.this,PostShareActivity.class);
+                        startActivity(intent);
                         popupWindow.dismiss();
                         break;
                     case R.id.btn_add_to_blacklist:
@@ -70,6 +74,8 @@ public class YuChiLvActivity extends Activity {
                         popupWindow.dismiss();
                         break;
                     case R.id.btn_report:
+                        intent = new Intent(PostMsgLvActivity.this,JuBaoActivity.class);
+                        startActivity(intent);
                         popupWindow.dismiss();
                         break;
                 }
