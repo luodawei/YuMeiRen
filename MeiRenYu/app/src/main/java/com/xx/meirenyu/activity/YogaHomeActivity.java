@@ -33,7 +33,6 @@ public class YogaHomeActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yoga_home);
-
         yogaHome = (RadioGroup) findViewById(R.id.yoga_home_radio_group);
         yogaHomeContent = (FrameLayout) findViewById(R.id.yoga_home_content);
         manager = getFragmentManager();
