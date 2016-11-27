@@ -11,10 +11,10 @@ import com.yss.yumeiren.R;
 /**
  * Created by Administrator on 2016/11/26.
  */
-public class YuChiListViewAdapter extends BaseAdapter {
+public class PostMsgListViewAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
-    public YuChiListViewAdapter(Context context){
+    public PostMsgListViewAdapter(Context context){
         this.context = context;
         inflater = LayoutInflater.from(context);
     }
