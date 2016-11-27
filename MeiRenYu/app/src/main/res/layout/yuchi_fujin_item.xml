@@ -54,13 +54,15 @@
         android:layout_marginRight="12dp"
         android:orientation="horizontal"
         android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:textColor="@color/gray_black">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="40分钟前" />
+            android:text="40分钟前"
+            android:textColor="@color/gray_black" />
 
         <TextView
             android:id="@+id/comments"
@@ -69,7 +71,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="12dp"
-            android:text="9527" />
+            android:text="9527"
+            android:textColor="@color/gray_black" />
 
         <TextView
             android:id="@+id/comment"
@@ -78,7 +81,8 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
             android:layout_toLeftOf="@id/comments"
-            android:text="评论" />
+            android:text="评论"
+            android:textColor="@color/gray_black" />
 
         <CheckBox
             android:id="@+id/like_count"
@@ -91,9 +95,21 @@
             android:checked="false"
             android:drawableLeft="@mipmap/like"
             android:drawablePadding="5dp"
+            android:gravity="center_vertical"
             android:text="9527"
-            android:textColor="@color/gray_black"
-            />
+            android:textColor="@color/gray_black" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/like_count"
+            android:drawableLeft="@mipmap/juli"
+            android:gravity="center_vertical"
+            android:text="0.5km"
+            android:textColor="@color/gray_black" />
     </RelativeLayout>
 
 </LinearLayout>

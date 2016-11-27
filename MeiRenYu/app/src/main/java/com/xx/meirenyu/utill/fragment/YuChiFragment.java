@@ -36,7 +36,7 @@ public class YuChiFragment extends Fragment {
         btnNew = (TextView) view.findViewById(R.id.btn_new);
         activity = getActivity();
 
-        yuChiListView.setAdapter(new YuChiNewAdapter(activity));
+        yuChiListView.setAdapter(new YuChiNearbyAdapter(activity));
         btnNearBy.setOnClickListener(getOnClickListener());
         btnNew.setOnClickListener(getOnClickListener());
 
@@ -48,9 +48,17 @@ public class YuChiFragment extends Fragment {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.btn_nearby:
+                        btnNearBy.setTextColor(getResources().getColor(R.color.white));
+                        btnNearBy.setBackgroundColor(getResources().getColor(R.color.main_blue));
+                        btnNew.setTextColor(getResources().getColor(R.color.black));
+                        btnNew.setBackgroundColor(getResources().getColor(R.color.grey));
                         yuChiListView.setAdapter(new YuChiNearbyAdapter(activity));
                         break;
                     case R.id.btn_new:
+                        btnNew.setTextColor(getResources().getColor(R.color.white));
+                        btnNew.setBackgroundColor(getResources().getColor(R.color.main_blue));
+                        btnNearBy.setTextColor(getResources().getColor(R.color.black));
+                        btnNearBy.setBackgroundColor(getResources().getColor(R.color.grey));
                         yuChiListView.setAdapter(new YuChiNewAdapter(activity));
                         break;
                 }
