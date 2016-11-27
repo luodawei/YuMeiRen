@@ -39,7 +39,6 @@ public class MyOrderActivity extends Activity {
         daifahuo_view = findViewById(R.id.daifahuo_view);
         daishouhuo_view = findViewById(R.id.daishouhuo_view);
 
-        fanhui.setOnClickListener(onClickListener);
         quanbu.setOnClickListener(onClickListener);
         daifukuan.setOnClickListener(onClickListener);
         daifahuo.setOnClickListener(onClickListener);

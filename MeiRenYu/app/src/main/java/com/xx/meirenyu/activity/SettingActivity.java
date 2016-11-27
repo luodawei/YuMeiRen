@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,39 +21,39 @@ import com.yss.yumeiren.R;
  * 系统设置页面
  */
 public class SettingActivity extends Activity {
-    TextView clearhuancun;//清除缓存按钮
+    RelativeLayout clearhuancun;//清除缓存按钮
     LayoutInflater layoutInflater;//视图转换器
     AlertDialog alertDialog;//弹出框对象
     AlertDialog.Builder builder;//builder对象
     Button yesBtn;//清除缓存确认按钮
     Button noBtn;//清除缓存取消按钮
-    TextView exitText;//退出按钮
+    RelativeLayout exitText;//退出按钮
     TextView exitBtn;//退出登录按钮
     Button canceBtn;//取消取出登录按钮
-    TextView fontsetting;//字体设置按钮
+    RelativeLayout fontsetting;//字体设置按钮
     TextView xiaohao;//小号设置按钮
     TextView biaozhun;//标准字体设置按钮
     TextView dahao;//大号字体设置按钮
     TextView teda;//特大号字体设置按钮
-    TextView messageSettingBtn;//设置页面消息提示按钮
+    RelativeLayout messageSettingBtn;//设置页面消息提示按钮
     TextView settingBackBtn;//返回按钮
-    TextView setWeiBoBtn;//微博绑定按钮
-    TextView aboutUsBtn;//关于我们跳转按钮
-    TextView changePasswordBtn;//修改密码按钮
+    RelativeLayout setWeiBoBtn;//微博绑定按钮
+    RelativeLayout aboutUsBtn;//关于我们跳转按钮
+    RelativeLayout changePasswordBtn;//修改密码按钮
     Intent intent;//跳转意图
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-        clearhuancun = (TextView) findViewById(R.id.clear_huancun);
-        exitText = (TextView) findViewById(R.id.exit_text);
-        fontsetting = (TextView) findViewById(R.id.font_setting);
-        messageSettingBtn = (TextView) findViewById(R.id.message_setting_btn);
+        clearhuancun = (RelativeLayout) findViewById(R.id.clear_huancun);
+        exitText = (RelativeLayout) findViewById(R.id.exit_text);
+        fontsetting = (RelativeLayout) findViewById(R.id.font_setting);
+        messageSettingBtn = (RelativeLayout) findViewById(R.id.message_setting_btn);
         settingBackBtn = (TextView) findViewById(R.id.search_back_btn);
-        setWeiBoBtn = (TextView) findViewById(R.id.set_weiBo_btn);
-        aboutUsBtn = (TextView) findViewById(R.id.about_us_btn);
-        changePasswordBtn = (TextView) findViewById(R.id.change_password_btn);
+        setWeiBoBtn = (RelativeLayout) findViewById(R.id.set_weiBo_btn);
+        aboutUsBtn = (RelativeLayout) findViewById(R.id.about_us_btn);
+        changePasswordBtn = (RelativeLayout) findViewById(R.id.change_password_btn);
         //设置监听
         fontsetting.setOnClickListener(onClickListener);
         exitText.setOnClickListener(onClickListener);
