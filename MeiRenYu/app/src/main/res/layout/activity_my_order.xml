@@ -314,68 +314,6 @@
             android:paddingRight="14dp"
             android:layout_gravity="right"
             android:background="@drawable/pingjia"/>
-
-
-        <!--底部-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="bottom"
-            >
-            <TextView
-                android:id="@+id/shouye"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/shuo_ye"
-                android:drawableTop="@mipmap/shouye_white"
-                android:gravity="center_horizontal"
-                android:textColor="@color/textcolor"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-            <TextView
-                android:id="@+id/gouwuche"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/gouwu_che"
-                android:textColor="@color/textcolor"
-                android:drawableTop="@mipmap/gouwuche"
-                android:gravity="center_horizontal"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-            <TextView
-                android:id="@+id/dingdan"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/ding_dan"
-                android:drawableTop="@mipmap/dingdan_green"
-                android:gravity="center_horizontal"
-                android:textColor="@color/meirenyu_bg_green"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-            <TextView
-                android:id="@+id/zaixiankefu"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/zaixiankefu"
-                android:drawableTop="@mipmap/zaixiankefu"
-                android:gravity="center_horizontal"
-                android:textColor="@color/textcolor"
-                android:background="@color/jiesuan_bg_grey"
-                android:paddingTop="9dp"
-                android:paddingBottom="4dp"
-                />
-        </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
