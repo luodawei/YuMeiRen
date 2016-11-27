@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.xx.meirenyu.utill.adapter.OnlineServiceAdapter;
 import com.xx.meirenyu.utill.adapter.OnlineServiceUserMessageAdapter;
 import com.xx.meirenyu.utill.model.UserMessageModel;
 import com.yss.yumeiren.R;
@@ -42,6 +43,7 @@ public class OnlineServiceActivity extends Activity {
     ImageView search_back_btn;
     ListView serviceMessageListView;
     OnlineServiceUserMessageAdapter onlineServiceUserMessageAdapter;
+    OnlineServiceAdapter onlineServiceAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,6 @@ public class OnlineServiceActivity extends Activity {
         search_back_btn.setOnClickListener(onClickListener);
         serviceMessageListView= (ListView) findViewById(R.id.servicer_listview);
             setOnKey();
-
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -98,6 +99,8 @@ public class OnlineServiceActivity extends Activity {
                         userMesssage.add(content);
                     }
                     serviceEdit.setText(null);
+                    onlineServiceAdapter=new OnlineServiceAdapter(OnlineServiceActivity.this,list);
+                    serviceMessageListView.setAdapter(onlineServiceAdapter);
                     list.clear();
                     setOnKey();
                 }
