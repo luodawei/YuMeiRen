@@ -106,7 +106,7 @@ public class AlreadyLogInActivity extends Activity {
                     break;
                 case R.id.my_collection_layout:
                     //我的收藏
-                    Intent intent3 = new Intent(AlreadyLogInActivity.this,YogaMyCollectionLvActivity.class);
+                    Intent intent3 = new Intent(AlreadyLogInActivity.this,YogaMyCollectLvActivity.class);
                     startActivity(intent3);
                     break;
                 case R.id.relative_recommend_layout:
