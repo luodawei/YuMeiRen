@@ -19,6 +19,14 @@
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/add"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"/>
+
     </RelativeLayout>
 
     <LinearLayout
@@ -57,7 +65,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/yu_chi_list_view"
+        android:id="@+id/yu_chi_fragment_list_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="12dp"

@@ -38,15 +38,18 @@
         <activity android:name="com.xx.meirenyu.activity.SuggestionActivity"/>//商城建议页面
         <activity android:name="com.xx.meirenyu.activity.MainActivity"/><!--商城首页-->
         <activity android:name="com.xx.meirenyu.activity.YogaWoDeTieZiActivity"/><!--我的帖子-->
-        <activity android:name="com.xx.meirenyu.activity.YogaMyCollectionLvActivity"/><!--我的收藏-->
+        <activity android:name="com.xx.meirenyu.activity.YogaMyCollectLvActivity"/><!--我的收藏-->
         <activity android:name="com.xx.meirenyu.activity.PushAboutAppLvActivity"/><!--相关推荐-->
         <activity android:name="com.xx.meirenyu.activity.JuBaoActivity"/><!--举报-->
         <activity android:name="com.xx.meirenyu.activity.JuBaoSuccesedActivity"/><!--举报成功-->
         <activity android:name="com.xx.meirenyu.activity.AppUpdateActivity"/><!--APP更新页面-->
         <activity android:name="com.xx.meirenyu.activity.FansActivity"/><!--粉丝页面-->
         <activity android:name="com.xx.meirenyu.activity.MyGuanZhuActivity"/><!--我的关注页面-->
-        <activity android:name="com.xx.meirenyu.activity.IntegralActivity"/> //积分页面
-        <activity android:name="com.xx.meirenyu.activity.IntegralInGiftsActivity"/> //积分换好礼页面
-
+        <activity android:name="com.xx.meirenyu.activity.PostShareActivity"/><!--分享到帖子圈-->
+        <activity android:name="com.xx.meirenyu.activity.PostActivity"/><!--发表帖子的页面-->
+        <activity android:name="com.xx.meirenyu.activity.YogaClothesActivity"/><!--瑜伽服-->
+        <activity android:name="com.xx.meirenyu.activity.YogaCushionActivity"/><!--瑜伽垫-->
+        <activity android:name="com.xx.meirenyu.activity.YogaOtherShopActivity"/><!--其他商品-->
+        <activity android:name="com.xx.meirenyu.activity.PostMsgLvActivity"/><!--帖子展示页面-->
     </application>
 </manifest>

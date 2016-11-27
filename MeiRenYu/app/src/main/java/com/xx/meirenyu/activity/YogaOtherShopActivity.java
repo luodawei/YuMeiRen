@@ -6,12 +6,12 @@ import android.os.Bundle;
 import com.yss.yumeiren.R;
 
 /**
- * Created by Administrator on 2016/11/25.
+ * Created by Administrator on 2016/11/27.
  */
-public class YogaMyCollectionLvActivity extends Activity {
+public class YogaOtherShopActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yoga_my_collect_lv);
+        setContentView(R.layout.activity_yoga_others_shop);
     }
 }

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@color/head_green">
         <ImageView
-            android:id="@+id/search_back_btn"
+            android:id="@+id/back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/back_btn"
@@ -30,7 +30,6 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-
     </ListView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,12 +38,14 @@
         android:background="#fafafa"
         android:gravity="center_vertical">
         <EditText
+            android:id="@+id/online_service_edit"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:background="@drawable/service_edit_style"
             android:layout_margin="10dp"
+            android:imeOptions="actionSend"
             />
         <ImageView
             android:layout_width="wrap_content"
