@@ -45,6 +45,8 @@
         <activity android:name="com.xx.meirenyu.activity.AppUpdateActivity"/><!--APP更新页面-->
         <activity android:name="com.xx.meirenyu.activity.FansActivity"/><!--粉丝页面-->
         <activity android:name="com.xx.meirenyu.activity.MyGuanZhuActivity"/><!--我的关注页面-->
-        //瑜池附近
+        <activity android:name="com.xx.meirenyu.activity.IntegralActivity"/> //积分页面
+        <activity android:name="com.xx.meirenyu.activity.IntegralInGiftsActivity"/> //积分换好礼页面
+
     </application>
 </manifest>
