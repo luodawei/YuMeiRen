@@ -19,7 +19,7 @@ import com.xx.meirenyu.activity.MyOrderActivity;
 import com.xx.meirenyu.activity.MyPlanListViewActivity;
 import com.xx.meirenyu.activity.SettingActivity;
 import com.xx.meirenyu.activity.ShareAppActivity;
-import com.xx.meirenyu.activity.YogaMyCollectionLvActivity;
+import com.xx.meirenyu.activity.YogaMyCollectLvActivity;
 import com.xx.meirenyu.activity.YogaWoDeTieZiActivity;
 import com.yss.yumeiren.R;
 
@@ -95,7 +95,7 @@ public class MineFragment extends Fragment {
                     break;
                 case R.id.my_collection_layout:
                     //我的收藏
-                    intent = new Intent(activity,YogaMyCollectionLvActivity.class);
+                    intent = new Intent(activity,YogaMyCollectLvActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.relative_recommend_layout:
