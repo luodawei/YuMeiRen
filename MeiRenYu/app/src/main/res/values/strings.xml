@@ -17,7 +17,10 @@
     <string name="my_order">我的订单</string>
     <string name="quanbu">全部</string>
     <string name="daifukuan">待付款</string>
+    <string name="yifukuan">已付款</string>
     <string name="daifahuo">待发货</string>
+    <string name="yifahuo">已发货</string>
+    <string name="chakanwuliu">查看物流</string>
     <string name="daishouhuo">待收货</string>
     <string name="jianyiyijian">建议意见</string>
     <string name="xiejianyiyijian">写出您对我们的建议或意见</string>
