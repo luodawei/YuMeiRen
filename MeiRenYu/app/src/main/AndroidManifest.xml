@@ -45,5 +45,6 @@
         <activity android:name="com.xx.meirenyu.activity.AppUpdateActivity"/><!--APP更新页面-->
         <activity android:name="com.xx.meirenyu.activity.FansActivity"/><!--粉丝页面-->
         <activity android:name="com.xx.meirenyu.activity.MyGuanZhuActivity"/><!--我的关注页面-->
+        //瑜池附近
     </application>
 </manifest>
