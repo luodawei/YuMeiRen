@@ -36,7 +36,7 @@ public class YuChiFragment extends Fragment {
         btnNew = (TextView) view.findViewById(R.id.btn_new);
         activity = getActivity();
 
-        yuChiListView.setAdapter(new YuChiNearbyAdapter(activity));
+        yuChiListView.setAdapter(new YuChiNewAdapter(activity));
         btnNearBy.setOnClickListener(getOnClickListener());
         btnNew.setOnClickListener(getOnClickListener());
 
