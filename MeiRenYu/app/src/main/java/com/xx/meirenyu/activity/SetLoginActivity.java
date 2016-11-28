@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.xx.meirenyu.utill.fragment.MineFragment;
 import com.yss.yumeiren.R;
 
 /**
@@ -32,7 +33,7 @@ public class SetLoginActivity extends Activity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btn_login:
-                    Intent intent = new Intent(SetLoginActivity.this, AlreadyLogInActivity.class);
+                    Intent intent = new Intent(SetLoginActivity.this, MineFragment.class);
                     startActivity(intent);
                     break;
                 case R.id.btn_register:
