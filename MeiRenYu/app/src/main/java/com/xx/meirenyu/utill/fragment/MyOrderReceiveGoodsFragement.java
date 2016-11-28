@@ -2,7 +2,6 @@ package com.xx.meirenyu.utill.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -19,7 +18,7 @@ import com.yss.yumeiren.R;
 public class MyOrderReceiveGoodsFragement extends Fragment {
     ListView myorder_lv;
     Activity activity;
-    Context context;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

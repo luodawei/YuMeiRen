@@ -212,6 +212,7 @@
             android:layout_below="@id/dierpai"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
             android:background="@mipmap/jiesuankuang"
             android:gravity="center"
             android:orientation="horizontal">

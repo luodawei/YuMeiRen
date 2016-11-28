@@ -1,17 +1,16 @@
 package com.xx.meirenyu.utill.fragment;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.content.Context;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
+        import android.app.Activity;
+        import android.app.Fragment;
+        import android.os.Bundle;
+        import android.support.annotation.Nullable;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ListView;
 
-import com.xx.meirenyu.utill.adapter.MyOrderObligationAdapter;
-import com.yss.yumeiren.R;
+        import com.xx.meirenyu.utill.adapter.MyOrderObligationAdapter;
+        import com.yss.yumeiren.R;
 
 /**
  * Created by Administrator on 2016/11/27.
@@ -19,7 +18,6 @@ import com.yss.yumeiren.R;
 public class MyOrderObligationFragement extends Fragment {
     ListView my_order_lv;
     Activity activity;
-    Context context;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

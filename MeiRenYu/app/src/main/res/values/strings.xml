@@ -8,6 +8,7 @@
     <string name="jiesuanjieshao02">健身瑜伽服两件套*1</string>
     <string name="jiesuanguige02">颜色:黑色 大小:M</string>
     <string name="jiesuan">结算:</string>
+    <string name="shop_cart_jiesuan">结算</string>
     <string name="jiege">价格:</string>
     <string name="shanchu">删除</string>
     <string name="ding_dan">订单</string>
@@ -16,6 +17,7 @@
     <string name="shangcheng_problem">是不是哪里出 \n 了什么问题？</string>
     <string name="my_order">我的订单</string>
     <string name="quanbu">全部</string>
+    <string name="quanxuan">全选</string>
     <string name="daifukuan">待付款</string>
     <string name="yifukuan">已付款</string>
     <string name="daifahuo">待发货</string>
