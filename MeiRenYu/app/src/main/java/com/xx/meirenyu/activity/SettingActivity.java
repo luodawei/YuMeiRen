@@ -31,10 +31,17 @@ public class SettingActivity extends Activity {
     TextView exitBtn;//退出登录按钮
     Button canceBtn;//取消取出登录按钮
     RelativeLayout fontsetting;//字体设置按钮
-    TextView xiaohao;//小号设置按钮
-    TextView biaozhun;//标准字体设置按钮
-    TextView dahao;//大号字体设置按钮
-    TextView teda;//特大号字体设置按钮
+
+    RelativeLayout xiaohao;//小号设置按钮
+    RelativeLayout biaozhun;//标准字体设置按钮
+    RelativeLayout dahao;//大号字体设置按钮
+    RelativeLayout teda;//特大号字体设置按钮
+
+    TextView xiaohao1;//小号设置按钮
+    TextView biaozhun1;//标准字体设置按钮
+    TextView dahao1;//大号字体设置按钮
+    TextView teda1;//特大号字体设置按钮
+
     RelativeLayout messageSettingBtn;//设置页面消息提示按钮
     TextView settingBackBtn;//返回按钮
     RelativeLayout setWeiBoBtn;//微博绑定按钮
@@ -108,14 +115,23 @@ public class SettingActivity extends Activity {
         layoutInflater = LayoutInflater.from(this);
         builder = new AlertDialog.Builder(this);
         View fontView = layoutInflater.inflate(R.layout.dialog_set_font, null);
-        xiaohao = (TextView) fontView.findViewById(R.id.font_xiao);
+        xiaohao = (RelativeLayout) fontView.findViewById(R.id.font_xiao);
         xiaohao.setOnClickListener(onClickListener);
-        biaozhun = (TextView) fontView.findViewById(R.id.font_biaozhun);
+        biaozhun = (RelativeLayout) fontView.findViewById(R.id.font_biaozhun);
         biaozhun.setOnClickListener(onClickListener);
-        dahao = (TextView) fontView.findViewById(R.id.font_da);
+        dahao = (RelativeLayout) fontView.findViewById(R.id.font_da);
         dahao.setOnClickListener(onClickListener);
-        teda = (TextView) fontView.findViewById(R.id.font_teda);
+        teda = (RelativeLayout) fontView.findViewById(R.id.font_teda);
         teda.setOnClickListener(onClickListener);
+
+        xiaohao1= (TextView) fontView.findViewById(R.id.font_xiao1);
+       // xiaohao1.setOnClickListener(onClickListener);
+        biaozhun1 = (TextView) fontView.findViewById(R.id.font_biaozhun1);
+        //biaozhun1.setOnClickListener(onClickListener);
+        dahao1= (TextView) fontView.findViewById(R.id.font_da1);
+        //dahao1.setOnClickListener(onClickListener);
+        teda1= (TextView) fontView.findViewById(R.id.font_teda1);
+        //teda1.setOnClickListener(onClickListener);
         builder.setView(fontView);//设置自定义对话框view视图
         alertDialog = builder.create();//获得一个alertdialog对象
         alertDialog.show();//设置字体弹出框显示
@@ -163,34 +179,34 @@ public class SettingActivity extends Activity {
                     break;
                 case R.id.font_xiao:
                     /*小号字体点击事件*/
-                    xiaohao.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
-                    biaozhun.setBackgroundColor(getResources().getColor(R.color.white));
-                    dahao.setBackgroundColor(getResources().getColor(R.color.white));
-                    teda.setBackgroundColor(getResources().getColor(R.color.white));
+                    xiaohao1.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
+                    biaozhun1.setBackgroundColor(getResources().getColor(R.color.white));
+                    dahao1.setBackgroundColor(getResources().getColor(R.color.white));
+                    teda1.setBackgroundColor(getResources().getColor(R.color.white));
                     Toast.makeText(SettingActivity.this, "字体大小设置小号", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.font_biaozhun:
                     /*标准字体点击事件*/
-                    biaozhun.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
-                    xiaohao.setBackgroundColor(getResources().getColor(R.color.white));
-                    dahao.setBackgroundColor(getResources().getColor(R.color.white));
-                    teda.setBackgroundColor(getResources().getColor(R.color.white));
+                    biaozhun1.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
+                    xiaohao1.setBackgroundColor(getResources().getColor(R.color.white));
+                    dahao1.setBackgroundColor(getResources().getColor(R.color.white));
+                    teda1.setBackgroundColor(getResources().getColor(R.color.white));
                     Toast.makeText(SettingActivity.this, "字体大小设置为标准", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.font_da:
                       /*设置大字体监听*/
-                    dahao.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
+                    dahao1.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
                     biaozhun.setBackgroundColor(getResources().getColor(R.color.white));
-                    xiaohao.setBackgroundColor(getResources().getColor(R.color.white));
-                    teda.setBackgroundColor(getResources().getColor(R.color.white));
+                    xiaohao1.setBackgroundColor(getResources().getColor(R.color.white));
+                    teda1.setBackgroundColor(getResources().getColor(R.color.white));
                     Toast.makeText(SettingActivity.this, "字体大小设置为大号", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.font_teda:
                     /*设置特大字体监听*/
-                    teda.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
-                    biaozhun.setBackgroundColor(getResources().getColor(R.color.white));
-                    dahao.setBackgroundColor(getResources().getColor(R.color.white));
-                    xiaohao.setBackgroundColor(getResources().getColor(R.color.white));
+                    teda1.setBackground(getResources().getDrawable(R.mipmap.gou_true_image));
+                    biaozhun1.setBackgroundColor(getResources().getColor(R.color.white));
+                    dahao1.setBackgroundColor(getResources().getColor(R.color.white));
+                    xiaohao1.setBackgroundColor(getResources().getColor(R.color.white));
                     Toast.makeText(SettingActivity.this, "字体大小设置为特大号", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.message_setting_btn:
