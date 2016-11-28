@@ -71,10 +71,10 @@ public class FansListViewAdapter extends BaseAdapter {
         boolean sex=fansItemModel.isSsex();
         if (sex){
             //性别男
-           drawable=context.getResources().getDrawable(R.drawable.boy);
+           drawable=context.getResources().getDrawable(R.mipmap.boy);
         }else{
             //性别女
-            drawable=context.getResources().getDrawable(R.drawable.girl);
+            drawable=context.getResources().getDrawable(R.mipmap.girl);
         }
         viewHodler.user_name.setCompoundDrawables(null,null,drawable,null);
         //设置签名

@@ -14,25 +14,22 @@ import com.yss.yumeiren.R;
  */
 
 public class MyPlanDetailActivity extends Activity {
+    ImageView btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_plan_detail);
-        ImageView btnBack = (ImageView)findViewById(R.id.btn_back);
-        //这个跳转方式应该是错的
-        btnBack.setOnClickListener(onClickListener);
+        btnBack = (ImageView)findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
 
     }
-    View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent;
-            switch (v.getId()){
-                case R.id.btn_back:
-                    intent = new Intent(MyPlanDetailActivity.this, MyPlanListViewActivity.class);
-                    startActivity(intent);
-                    break;
-            }
-        }
-    };
+
+
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.xx.meirenyu.utill.fragment.MineFragment;
 import com.yss.yumeiren.R;
 
 /**
@@ -21,7 +22,7 @@ public class LoginActivity extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, AlreadyLogInActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MineFragment.class);
                 startActivity(intent);
             }
         });

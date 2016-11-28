@@ -26,6 +26,7 @@
         android:background="@color/search_bar_false_bg"/>
     <!--小字体-->
     <RelativeLayout
+        android:id="@+id/font_xiao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -39,7 +40,7 @@
             android:layout_alignParentLeft="true"
             android:drawableRight="@android:color/white"/>
         <TextView
-            android:id="@+id/font_xiao"
+            android:id="@+id/font_xiao1"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
@@ -53,6 +54,7 @@
         android:background="@color/search_bar_false_bg"/>
     <!--标准字体-->
     <RelativeLayout
+        android:id="@+id/font_biaozhun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -65,7 +67,7 @@
             android:textColor="@color/blak"
             android:layout_alignParentLeft="true" />
         <TextView
-            android:id="@+id/font_biaozhun"
+            android:id="@+id/font_biaozhun1"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@mipmap/gou_true_image"
@@ -79,6 +81,7 @@
         android:background="@color/search_bar_false_bg"/>
     <!--大字体-->
     <RelativeLayout
+        android:id="@+id/font_da"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -91,7 +94,7 @@
             android:textColor="@color/blak"
             android:layout_alignParentLeft="true" />
         <TextView
-            android:id="@+id/font_da"
+            android:id="@+id/font_da1"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
@@ -105,12 +108,12 @@
         android:background="@color/search_bar_false_bg"/>
     <!--特大字体-->
     <RelativeLayout
+        android:id="@+id/font_teda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:padding="10dp">
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="特大"
@@ -118,7 +121,7 @@
             android:textColor="@color/blak"
             android:layout_alignParentLeft="true" />
         <TextView
-            android:id="@+id/font_teda"
+            android:id="@+id/font_teda1"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
