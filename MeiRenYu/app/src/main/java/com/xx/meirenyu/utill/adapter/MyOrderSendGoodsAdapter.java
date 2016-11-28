@@ -9,18 +9,18 @@ import android.widget.BaseAdapter;
 import com.yss.yumeiren.R;
 
 /**
- * Created by Administrator on 2016/11/26.
+ * Created by Administrator on 2016/11/27.
  */
-public class YuChiNewAdapter extends BaseAdapter {
+public class MyOrderSendGoodsAdapter extends BaseAdapter {
     Context context;
-    LayoutInflater inflater;
-    public YuChiNewAdapter(Context context){
+    LayoutInflater layoutInflater;
+    public MyOrderSendGoodsAdapter(Context context){
         this.context = context;
-        inflater = LayoutInflater.from(context);
+        layoutInflater=LayoutInflater.from(context);
     }
     @Override
     public int getCount() {
-        return 5;
+        return 10;
     }
 
     @Override
@@ -35,8 +35,8 @@ public class YuChiNewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null){
-            convertView = inflater.inflate(R.layout.post_a_msg_item,null);
+        if(convertView==null){
+            convertView = layoutInflater.inflate(R.layout.fragement_send_goods_item,null);
         }
         return convertView;
     }

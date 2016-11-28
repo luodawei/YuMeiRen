@@ -47,10 +47,11 @@ public class YuChiFragment extends Fragment {
         activity = getActivity();
 
         yuChiListView.setAdapter(new YuChiNewAdapter(activity));
+        yuChiListView.setOnItemClickListener(onItemClickListener);
         btnNearBy.setOnClickListener(getOnClickListener());
         btnNew.setOnClickListener(getOnClickListener());
         btnAdd.setOnClickListener(getOnClickListener());
-        yuChiListView.setOnItemClickListener(onItemClickListener);
+
         return view;
     }
 
