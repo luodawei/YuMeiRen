@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.xx.meirenyu.utill.adapter.MyPlanAdapter;
@@ -20,6 +21,7 @@ import java.util.List;
 
 public class MyPlanListViewActivity extends Activity {
     List<HashMap<String, Object>> list;
+    ImageView back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,14 @@ public class MyPlanListViewActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.my_plan_list);
         listView.setAdapter(new MyPlanAdapter(this));
         listView.setOnItemClickListener(onItemClickListener);
+        back_btn= (ImageView) findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {

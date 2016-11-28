@@ -28,6 +28,7 @@ import android.widget.TextView;
  * 在线客服页面
  */
 public class OnlineServiceActivity extends Activity {
+    ImageView back_btn;
     EditText serviceEdit;
     boolean isServicer = false;//布尔值来判断是谁发的消息
     String[] from = {"userHeadImage", "userMessage"};
@@ -46,9 +47,9 @@ public class OnlineServiceActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_online_service_lv);
-        search_back_btn = (ImageView) findViewById(R.id.back_btn);
+        back_btn = (ImageView) findViewById(R.id.back_btn);
         serviceEdit= (EditText) findViewById(R.id.online_service_edit);
-        search_back_btn.setOnClickListener(onClickListener);
+        back_btn.setOnClickListener(onClickListener);
         serviceMessageListView= (ListView) findViewById(R.id.servicer_listview);
             setOnKey();
 
@@ -57,7 +58,7 @@ public class OnlineServiceActivity extends Activity {
         @Override
         public void onClick(View v) {
          switch (v.getId()){
-             case R.id.search_back_btn:
+             case R.id.back_btn:
                  finish();
                  break;
          }
