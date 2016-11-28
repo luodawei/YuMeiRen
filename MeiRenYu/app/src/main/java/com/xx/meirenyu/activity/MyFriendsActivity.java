@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -20,11 +21,19 @@ import java.util.List;
  */
 
 public class MyFriendsActivity extends Activity {
+    ImageView btn_back;
     List<HashMap<String,Object>> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_friends_lv);
+        btn_back= (ImageView) findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         ListView myFriendList = (ListView)findViewById(R.id.my_friend_list);
         list=getData();
         String[] from = {"portrait","nickname","content","time","num"};
