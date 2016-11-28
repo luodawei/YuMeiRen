@@ -28,7 +28,6 @@
         <activity android:name="com.xx.meirenyu.activity.ShareAppActivity"/><!--软件分享页面-->
         <activity android:name="com.xx.meirenyu.activity.AboutUsActivity"/><!--关于我们页面-->
         <activity android:name="com.xx.meirenyu.activity.ChatPageActivity"/><!--好友聊天页面-->
-        <!--登录完成页面-->
         <activity android:name="com.xx.meirenyu.activity.ShopCartJieSuanActivity"/>//购物车结算
         <activity android:name="com.xx.meirenyu.activity.ChangePasswordActivity"/><!--修改密码页面-->
         <activity android:name="com.xx.meirenyu.activity.MyOrderActivity"/>  //商城我的订单

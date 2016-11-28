@@ -30,20 +30,45 @@ import java.util.Set;
 public class MyPlanListViewActivity extends Activity {
     private List<String> list = new ArrayList<String>();
     private Set<SwipeListLayout> sets = new HashSet<>();
+    private ImageView btnBack;
+    private ImageView btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_plan_lv);
         ListView listView = (ListView) findViewById(R.id.my_plan_list);
+        btnBack = (ImageView) findViewById(R.id.btn_back);
+        btnAdd = (ImageView) findViewById(R.id.btn_add);
         getData();
         listView.setAdapter(new ListAdapter());
+        btnBack.setOnClickListener(getOnClickListener());
+        btnAdd.setOnClickListener(getOnClickListener());
     }
     private void getData(){
         for (int i = 0;i<15;i++){
             list.add("我的计划"+i);
         }
     }
+    public View.OnClickListener getOnClickListener(){
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                switch (v.getId()){
+                    case R.id.btn_back:
+                        finish();
+                        break;
+                    case R.id.btn_add:
+                        intent = new Intent(MyPlanListViewActivity.this,MyPlanDetailActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+            }
+        };
+        return onClickListener;
+    }
+
     class ListAdapter extends BaseAdapter{
 
         @Override
