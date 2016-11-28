@@ -146,6 +146,12 @@
                 android:padding="8dp"
                 android:layout_marginRight="18dp"/>
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/light_gray"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"/>
 
         <LinearLayout
             android:id="@+id/my_collection_layout"
@@ -172,12 +178,6 @@
                 android:layout_marginRight="18dp"/>
         </LinearLayout>
 
-        <!--  <View
-              android:layout_width="match_parent"
-              android:layout_height="0.5dp"
-              android:background="@color/light_gray"
-              android:layout_marginLeft="12dp"
-              android:layout_marginRight="12dp"/>-->
 
         <View
             android:layout_width="match_parent"
