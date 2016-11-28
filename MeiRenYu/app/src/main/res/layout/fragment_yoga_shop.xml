@@ -121,10 +121,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
-                        android:background="@mipmap/yuan1"
+                        android:background="@mipmap/yuan"
                         android:gravity="center"
                         android:text="瑜伽垫"
-                        android:textColor="#aaadb0"
+                        android:textColor="#FFFFFF"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -139,10 +139,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
-                        android:background="@mipmap/yuan1"
+                        android:background="@mipmap/yuan"
                         android:gravity="center"
                         android:text="其他商品"
-                        android:textColor="#aaadb0"
+                        android:textColor="#FFFFFF"
                         android:textSize="12sp" />
                 </LinearLayout>
 

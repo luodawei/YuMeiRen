@@ -13,7 +13,10 @@ import android.widget.ImageView;
 
 import com.xx.meirenyu.activity.OnlineServiceActivity;
 import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
+import com.xx.meirenyu.activity.YogaClothesActivity;
+import com.xx.meirenyu.activity.YogaCushionActivity;
 import com.xx.meirenyu.activity.YogaHomeActivity;
+import com.xx.meirenyu.activity.YogaOtherShopActivity;
 import com.xx.meirenyu.utill.adapter.YogaShowGridViewAdapter;
 import com.xx.meirenyu.utill.model.YogaShopGridViewModel;
 import com.yss.yumeiren.R;
@@ -31,12 +34,16 @@ public class YogaShopFragment extends Fragment {
     ImageView shop_cart;
     ImageView online_service;
     View view;
+    View textView1;
+    View textView2;
+    View textView3;
    // GridView gridView;
     //List<YogaShopGridViewModel> list=new ArrayList<YogaShopGridViewModel>();
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setGridView();
+
     }
     @Nullable
     @Override
@@ -44,15 +51,23 @@ public class YogaShopFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_yoga_shop,null);
         shop_cart = (ImageView) view.findViewById(R.id.shop_cart);
         online_service = (ImageView) view.findViewById(R.id.online_service);
+        textView1=view.findViewById(R.id.textView1);
+        textView2=view.findViewById(R.id.textView2);
+        textView3=view.findViewById(R.id.textView3);
         //gridView= (GridView) view.findViewById(R.id.yoga_show_gv);
         shop_cart.setOnClickListener(onClickListener);
         online_service.setOnClickListener(onClickListener);
+        textView1.setOnClickListener(onClickListener);
+        textView2.setOnClickListener(onClickListener);
+        textView3.setOnClickListener(onClickListener);
         myActivity = getActivity();
        // getData();
         //YogaShowGridViewAdapter yogaShowGridViewAdapter=new YogaShowGridViewAdapter(getActivity(),list);
        // gridView.setAdapter(yogaShowGridViewAdapter);
         return view;
+
     }
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -66,6 +81,19 @@ public class YogaShopFragment extends Fragment {
                     intent = new Intent(myActivity, OnlineServiceActivity.class);
                     startActivity(intent);
                     break;
+                case R.id.textView1:
+                    intent = new Intent(myActivity,YogaClothesActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.textView2:
+                    intent = new Intent(myActivity, YogaCushionActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.textView3:
+                    intent = new Intent(myActivity, YogaOtherShopActivity.class);
+                    startActivity(intent);
+                    break;
+
             }
         }
     };

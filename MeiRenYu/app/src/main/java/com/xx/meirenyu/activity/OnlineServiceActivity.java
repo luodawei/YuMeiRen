@@ -2,6 +2,8 @@ package com.xx.meirenyu.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -13,9 +15,17 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.xx.meirenyu.utill.adapter.OnlineServiceAdapter;
 import com.xx.meirenyu.utill.adapter.OnlineServiceUserMessageAdapter;
 import com.xx.meirenyu.utill.model.UserMessageModel;
 import com.yss.yumeiren.R;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +38,7 @@ import android.widget.TextView;
  * 在线客服页面
  */
 public class OnlineServiceActivity extends Activity {
+    Socket socket=null;
     EditText serviceEdit;
     boolean isServicer = false;//布尔值来判断是谁发的消息
     String[] from = {"userHeadImage", "userMessage"};
@@ -39,9 +50,22 @@ public class OnlineServiceActivity extends Activity {
             "初学者瑜伽服"
     };
     List<String> userMesssage=new ArrayList<String>();
+    List<String> serviceMessage=new ArrayList<String>();
     ImageView search_back_btn;
     ListView serviceMessageListView;
     OnlineServiceUserMessageAdapter onlineServiceUserMessageAdapter;
+    OnlineServiceAdapter onlineServiceAdapter;
+    public Handler mtHandler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 0){
+
+                onlineServiceAdapter=new OnlineServiceAdapter(OnlineServiceActivity.this,list);
+                serviceMessageListView.setAdapter(onlineServiceAdapter);
+                Log.i("TAG","onlineServiceAdapter"+list.size());
+            }
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +74,7 @@ public class OnlineServiceActivity extends Activity {
         serviceEdit= (EditText) findViewById(R.id.online_service_edit);
         search_back_btn.setOnClickListener(onClickListener);
         serviceMessageListView= (ListView) findViewById(R.id.servicer_listview);
-            setOnKey();
-
+        setOnKey();
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -79,11 +102,10 @@ public class OnlineServiceActivity extends Activity {
     }
     //设置软盘方法
     public void setOnKey(){
-        serviceEdit.setOnKeyListener(onKeyListener);
+        serviceEdit.setOnKeyListener(onKeyListener);//
         serviceEdit.setImeOptions(R.mipmap.send);
         list = getMessageDate();
-        onlineServiceUserMessageAdapter=new OnlineServiceUserMessageAdapter(this,list);
-        serviceMessageListView.setAdapter(onlineServiceUserMessageAdapter);
+
     }
     View.OnKeyListener onKeyListener=new View.OnKeyListener() {
         @Override
@@ -96,10 +118,12 @@ public class OnlineServiceActivity extends Activity {
                     String content=serviceEdit.getText().toString();
                     if (content!=null){
                         userMesssage.add(content);
+                        list.clear();
                     }
                     serviceEdit.setText(null);
-                    list.clear();
                     setOnKey();
+                    onlineServiceUserMessageAdapter=new OnlineServiceUserMessageAdapter(OnlineServiceActivity.this,list);
+                    serviceMessageListView.setAdapter(onlineServiceUserMessageAdapter);
                 }
                 return true;
             }
@@ -118,5 +142,46 @@ public class OnlineServiceActivity extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
         CloseKeyBoard();
         return super.onTouchEvent(event);
+    }
+
+    public void SocketService(){
+        SocketService();
+    }
+    public void  getserviceData(){
+        new Thread(){
+            String str;
+                @Override
+                public void run() {
+                    super.run();
+                    Message msg=new Message();
+                    msg.what=0;
+                    Bundle bundle = new Bundle();
+                    bundle.clear();
+
+                    try {
+                        socket=new Socket();
+                        socket.connect(new InetSocketAddress("127.0.0.1",30000),5000);
+                        //获取输入输出流
+                        OutputStream out=socket.getOutputStream();
+                        BufferedReader buf=new BufferedReader(new InputStreamReader(socket.getInputStream(),"utf-8"));
+                        //读取发来的信息
+                        String line=null;
+                        while((line=buf.readLine())!=null){
+                            serviceMessage.add(line);
+                        }
+                        Log.i("TAG","serviceMessage"+line.toString());
+                        out.write(serviceEdit.getText().toString().getBytes("utf-8"));
+                        out.flush();
+                        bundle.putString("msg",line.toString());
+                        msg.setData(bundle);
+                        mtHandler.sendMessage(msg);
+                        buf.close();
+                        out.close();
+                        socket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+        }.start();
     }
 }

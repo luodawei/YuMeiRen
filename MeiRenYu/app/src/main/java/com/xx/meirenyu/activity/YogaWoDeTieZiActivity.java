@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -32,6 +33,7 @@ public class YogaWoDeTieZiActivity extends Activity {
     View myPostPager;
     View callMePager;
     View respondPager;
+    ImageView back_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,13 @@ public class YogaWoDeTieZiActivity extends Activity {
         btnMyPost = (TextView) findViewById(R.id.btn_my_post);
         btnCallMe = (TextView) findViewById(R.id.btn_call_me);
         btnRespond = (TextView) findViewById(R.id.btn_respond);
+        back_btn = (ImageView) findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         setListViewItem();
         getData();
         tieziPagerAdapter = new PagerAdapter() {
