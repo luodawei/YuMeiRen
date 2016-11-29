@@ -35,14 +35,17 @@ public class ShopCartJieSuanActivity extends Activity {
     LinearLayout shop_cart_jiesuan01,
             shop_cart_jiesuan02,
             Shop_cart_bianji01,
-            Shop_cart_bianji02;
+            Shop_cart_bianji02,
+            diyipai,
+            dierpai;
     RelativeLayout jiesuan_layout,
             shanchu_layout;
     CheckBox shop_cart_cb01,
             shop_cart_cb02,
             shop_cart_cball;
-    int num1,num2,price_01_num,
-            price_02_num;
+    int num1, num2, price_01_num,
+            price_02_num,
+            price_all_num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,8 @@ public class ShopCartJieSuanActivity extends Activity {
         shop_cart_jiesuan02 = (LinearLayout) findViewById(R.id.shop_cart_jiesuan02);
         Shop_cart_bianji01 = (LinearLayout) findViewById(R.id.shop_cart_bianji01);
         Shop_cart_bianji02 = (LinearLayout) findViewById(R.id.shop_cart_bianji02);
+        diyipai = (LinearLayout) findViewById(R.id.diyipai);
+        dierpai = (LinearLayout) findViewById(R.id.dierpai);
         jiesuan_layout = (RelativeLayout) findViewById(R.id.jiesuan_layout);
         shanchu_layout = (RelativeLayout) findViewById(R.id.shanchu_layout);
 
@@ -83,11 +88,11 @@ public class ShopCartJieSuanActivity extends Activity {
         shop_cart_cball.setOnClickListener(onClickListener);
         shop_cart_delete.setOnClickListener(onClickListener);
 
-        num1 =Integer.valueOf(changegoods_num01.getText().toString());
+        num1 = Integer.valueOf(changegoods_num01.getText().toString());
         num2 = Integer.valueOf(changegoods_num02.getText().toString());
         price_01_num = Integer.valueOf(price_01.getText().toString());
         price_02_num = Integer.valueOf(price_02.getText().toString());
-
+        price_all_num = Integer.valueOf(price_all.getText().toString());
 
     }
 
@@ -97,6 +102,15 @@ public class ShopCartJieSuanActivity extends Activity {
             switch (v.getId()) {
                 case R.id.fanhui:
                     finish();
+                    break;
+                case R.id.shop_cart_cball:
+                    if (shop_cart_cball.isChecked()) {
+                        shop_cart_cb01.setChecked(true);
+                        shop_cart_cb02.setChecked(true);
+                    } else {
+                        shop_cart_cb01.setChecked(false);
+                        shop_cart_cb02.setChecked(false);
+                    }
                     break;
                 case R.id.shop_cart_editing:
                     if (shop_cart_bianji.isChecked() == true) {
@@ -110,6 +124,7 @@ public class ShopCartJieSuanActivity extends Activity {
                         shop_cart_bianji.setChecked(false);
                         goods_num01.setText(Integer.toString(num1));
                         goods_num02.setText(Integer.toString(num2));
+                        price_all.setText(Integer.toString(price_01_num * num1 + price_02_num * num2));
                     } else {
                         shop_cart_jiesuan01.setVisibility(View.GONE);
                         shop_cart_jiesuan02.setVisibility(View.GONE);
@@ -119,39 +134,37 @@ public class ShopCartJieSuanActivity extends Activity {
                         Shop_cart_bianji02.setVisibility(View.VISIBLE);
                         shop_cart_bianji.setText("完成");
                         shop_cart_bianji.setChecked(true);
-                    price_all.setText(Integer.toString(price_01_num*num1+price_02_num*num2));
+
                     }
                     break;
                 case R.id.image_sub01:
-                    if(num1>1){
-                    changegoods_num01.setText(Integer.toString(--num1));
-                    }else {
-                        Toast.makeText(ShopCartJieSuanActivity.this,"不能再减了",Toast.LENGTH_SHORT).show();
+                    if (num1 > 1) {
+                        changegoods_num01.setText(Integer.toString(--num1));
+                    } else {
+                        Toast.makeText(ShopCartJieSuanActivity.this, "不能再减了", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 case R.id.image_add01:
                     changegoods_num01.setText(Integer.toString(++num1));
                     break;
                 case R.id.image_sub02:
-                    if(num2>1){
-                    changegoods_num02.setText(Integer.toString(--num2));
-                    }else {
-                        Toast.makeText(ShopCartJieSuanActivity.this,"不能再减了",Toast.LENGTH_SHORT).show();
+                    if (num2 > 1) {
+                        changegoods_num02.setText(Integer.toString(--num2));
+                    } else {
+                        Toast.makeText(ShopCartJieSuanActivity.this, "不能再减了", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 case R.id.image_add02:
                     changegoods_num02.setText(Integer.toString(++num2));
                     break;
-                case R.id.shop_cart_cball:
-                    if(shop_cart_cball.isChecked()){
-                    shop_cart_cb01.setChecked(true);
-                    shop_cart_cb02.setChecked(true);
-                    }else {
-                        shop_cart_cb01.setChecked(false);
-                        shop_cart_cb02.setChecked(false);
-                    }
-                    break;
+
                 case R.id.shop_cart_delete:
+                    if (shop_cart_cb01.isChecked() == true) {
+                        diyipai.setVisibility(View.GONE);
+                    }
+                    if (shop_cart_cb02.isChecked() == true) {
+                        dierpai.setVisibility(View.GONE);
+                    }
                     break;
 
             }

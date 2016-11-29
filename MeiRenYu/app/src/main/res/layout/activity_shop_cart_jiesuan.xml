@@ -49,7 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/jiesuan_top"
             android:background="@color/jiesuan_bg_grey"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="visible">
             <CheckBox
                 android:id="@+id/shop_cart_cb01"
                 android:layout_width="wrap_content"
@@ -206,7 +207,8 @@
             android:layout_below="@id/diyipai"
             android:layout_marginTop="2dp"
             android:background="@color/jiesuan_bg_grey"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="visible">
             <CheckBox
                 android:id="@+id/shop_cart_cb02"
                 android:layout_width="wrap_content"
