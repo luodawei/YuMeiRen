@@ -44,7 +44,8 @@
             android:text="2016-11-26"
             android:layout_toRightOf="@+id/user_portrait"
             android:layout_alignBottom="@+id/user_portrait"
-            android:layout_margin="5dp"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
         <TextView
             android:id="@+id/post_content"
             android:layout_width="match_parent"
@@ -75,7 +76,8 @@
                 android:id="@+id/reply_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="终于等到你，还好我没放弃"/>
+                android:text="终于等到你，还好我没放弃"
+                android:layout_marginBottom="10dp"/>
         </LinearLayout>
 
     </RelativeLayout>
