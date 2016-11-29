@@ -28,7 +28,8 @@
     <ListView
         android:id="@+id/yoga_my_collect_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
     </ListView>
 </LinearLayout>
