@@ -51,5 +51,6 @@
         <activity android:name="com.xx.meirenyu.activity.YogaOtherShopActivity"/><!--其他商品-->
         <activity android:name="com.xx.meirenyu.activity.PostMsgLvActivity"/><!--帖子展示页面-->
         <activity android:name="com.xx.meirenyu.activity.IntegralActivity"/><!--积分-->
+        <activity android:name="com.xx.meirenyu.activity.IntegralInGiftsActivity"/><!--积分换好礼-->
     </application>
 </manifest>
