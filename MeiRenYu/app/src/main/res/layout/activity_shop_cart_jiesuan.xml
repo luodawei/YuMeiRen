@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/jiesuan_top"
@@ -42,7 +44,6 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
-
         <LinearLayout
             android:id="@+id/diyipai"
             android:layout_width="match_parent"
@@ -357,95 +358,99 @@
 
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/jiesuan_layout"
-            android:layout_width="match_parent"
+        <!--<ListView-->
+            <!--android:id="@+id/shop_cart_lv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+        <!--</ListView>-->
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/jiesuan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="visible"
+        >
+        <CheckBox
+            android:id="@+id/shop_cart_cball"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="12dp"
-            android:visibility="visible"
-            >
-            <CheckBox
-                android:id="@+id/shop_cart_cball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quanxuan"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:checked="false"
-                />
-            <TextView
-                android:id="@+id/heji"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/heji"
-                android:layout_centerInParent="true"/>
-            <TextView
-                android:id="@+id/tubiao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="￥"
-                android:textColor="@color/red"
-                android:layout_toRightOf="@id/heji"
-                android:layout_centerVertical="true"
-                />
-            <TextView
-                android:id="@+id/price_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="150"
-                android:textColor="@color/red"
-                android:layout_toRightOf="@id/tubiao"
-                android:layout_centerVertical="true"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shop_cart_jiesuan"
-                android:textColor="@color/white"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:background="@color/meirenyu_bg_green"
-                android:layout_alignParentRight="true"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/shanchu_layout"
-            android:layout_width="match_parent"
+            android:text="@string/quanxuan"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            />
+        <TextView
+            android:id="@+id/heji"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="12dp"
-            android:visibility="gone"
-            >
-            <CheckBox
-                android:id="@+id/shop_cart_quanxuan_shanchu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quanxuan"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                />
-
-            <TextView
-                android:id="@+id/shop_cart_delete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shanchu"
-                android:textColor="@color/white"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:background="@color/meirenyu_bg_green"
-                android:layout_alignParentRight="true"
-                />
-        </RelativeLayout>
-
+            android:text="@string/heji"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/tubiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/red"
+            android:layout_toRightOf="@id/heji"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/price_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150"
+            android:textColor="@color/red"
+            android:layout_toRightOf="@id/tubiao"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shop_cart_jiesuan"
+            android:textColor="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/meirenyu_bg_green"
+            android:layout_alignParentRight="true"
+            />
     </RelativeLayout>
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/shanchu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"
+        >
+        <CheckBox
+            android:id="@+id/shop_cart_quanxuan_shanchu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quanxuan"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/shop_cart_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shanchu"
+            android:textColor="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/meirenyu_bg_green"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>
