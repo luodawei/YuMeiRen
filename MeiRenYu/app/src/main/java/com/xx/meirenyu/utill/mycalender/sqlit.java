@@ -1,4 +1,7 @@
 package com.xx.meirenyu.utill.mycalender;
+/**
+ * 日历存储数据库
+ */
 
 public class sqlit {
 	String date;

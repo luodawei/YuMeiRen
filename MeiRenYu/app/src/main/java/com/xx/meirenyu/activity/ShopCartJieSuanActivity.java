@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,6 +47,8 @@ public class ShopCartJieSuanActivity extends Activity {
     int num1, num2, price_01_num,
             price_02_num,
             price_all_num;
+    ListView shop_cart_lv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +82,9 @@ public class ShopCartJieSuanActivity extends Activity {
         image_sub02 = (ImageView) findViewById(R.id.image_sub02);
         image_add01 = (ImageView) findViewById(R.id.image_add01);
         image_add02 = (ImageView) findViewById(R.id.image_add02);
+
+//        shop_cart_lv = (ListView) findViewById(R.id.shop_cart_lv);
+
         shop_cart_bianji.setOnClickListener(onClickListener);
         fanhui.setOnClickListener(onClickListener);
         image_sub01.setOnClickListener(onClickListener);
@@ -94,8 +100,12 @@ public class ShopCartJieSuanActivity extends Activity {
         price_02_num = Integer.valueOf(price_02.getText().toString());
         price_all_num = Integer.valueOf(price_all.getText().toString());
 
-    }
+//        ShopCartAdapter shopCartAdapter = new ShopCartAdapter(this,list);
+//        shop_cart_lv.setAdapter(shopCartAdapter);
 
+
+    }
+//    List<String> list = new ArrayList<String>();
     View.OnClickListener onClickListener = new View.OnClickListener() {
 
         public void onClick(View v) {

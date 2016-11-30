@@ -24,7 +24,7 @@ import java.util.List;
  */
 public class IntegralActivity extends Activity {
     ImageView fanhui;
-    TextView integral_in_gifts;
+    TextView integral_in_gifts,integral,integral_all;
     DBManager dbManager;
     private String date = null;// 设置默认选中的日期  格式为 “2016-11-27” 标准DATE格式
     private TextView popupwindow_calendar_month;
@@ -40,6 +40,8 @@ public class IntegralActivity extends Activity {
         setContentView(R.layout.activity_integral);
         fanhui = (ImageView) findViewById(R.id.fanhui);
         integral_in_gifts = (TextView) findViewById(R.id.integral_in_gifts);
+        integral = (TextView) findViewById(R.id.integral);
+        integral_all = (TextView) findViewById(R.id.integral_all);
         fanhui.setOnClickListener(onClickListener);
         integral_in_gifts.setOnClickListener(onClickListener);
 
@@ -92,7 +94,7 @@ public class IntegralActivity extends Activity {
                 btn_signIn.setEnabled(false);
             }
         });
-        //监听所选中的日期
+        // 监听所选中的日期
 //		calendar.setOnCalendarClickListener(new OnCalendarClickListener() {
 //
 //			public void onCalendarClick(int row, int col, String dateFormat) {
@@ -119,7 +121,7 @@ public class IntegralActivity extends Activity {
 //			}
 //		});
 
-        //监听当前月份
+        // 监听当前月份
         calendar.setOnCalendarDateChangedListener(new SignCalendar.OnCalendarDateChangedListener() {
             public void onCalendarDateChanged(int year, int month) {
                 popupwindow_calendar_month

@@ -47,14 +47,84 @@
                 android:layout_centerInParent="true"
                 android:text="2016-11"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingBottom="5dp"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/textcolor"
                 android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="日"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="一"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="二"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="三"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="四"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="五"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="六"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp" />
+        </LinearLayout>
         <com.xx.meirenyu.utill.mycalender.SignCalendar
             android:id="@+id/popupwindow_calendar"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             android:clickable="false"
             android:background="@null"
             >
@@ -72,95 +142,6 @@
             android:text="签到"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
-
-        <!--星期的布局-->
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingTop="10dp">-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="日"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="一"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="二"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="三"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="四"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="五"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="六"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:textSize="18sp" />-->
-        <!--</LinearLayout>-->
-
-        <!--<GridView-->
-            <!--android:id="@+id/gv_sign_date"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@color/white"-->
-            <!--android:clickable="true"-->
-            <!--android:clipChildren="true"-->
-            <!--android:columnWidth="30dp"-->
-            <!--android:listSelector="@null"-->
-            <!--android:numColumns="7"-->
-            <!--android:paddingBottom="1dp"-->
-            <!--android:stretchMode="columnWidth"-->
-            <!--android:verticalSpacing="1dp">-->
-
-        <!--</GridView>-->
-
 
 
         <TextView
@@ -220,6 +201,7 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/integral_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
