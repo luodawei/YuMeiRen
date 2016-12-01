@@ -48,8 +48,6 @@ public class ShopCartJieSuanActivity extends Activity {
             price_02_num,
             price_all_num;
     ListView shop_cart_lv;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
