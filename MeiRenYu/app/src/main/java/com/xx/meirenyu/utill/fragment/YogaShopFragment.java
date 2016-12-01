@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.xx.meirenyu.activity.OnlineServiceActivity;
 import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
@@ -34,9 +35,9 @@ public class YogaShopFragment extends Fragment {
     ImageView shop_cart;
     ImageView online_service;
     View view;
-    View textView1;
-    View textView2;
-    View textView3;
+    TextView textView1;
+    TextView textView2;
+    TextView textView3;
    // GridView gridView;
     //List<YogaShopGridViewModel> list=new ArrayList<YogaShopGridViewModel>();
     @Override
@@ -51,9 +52,9 @@ public class YogaShopFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_yoga_shop,null);
         shop_cart = (ImageView) view.findViewById(R.id.shop_cart);
         online_service = (ImageView) view.findViewById(R.id.online_service);
-        textView1=view.findViewById(R.id.textView1);
-        textView2=view.findViewById(R.id.textView2);
-        textView3=view.findViewById(R.id.textView3);
+        textView1= (TextView) view.findViewById(R.id.textView1);
+        textView2= (TextView) view.findViewById(R.id.textView2);
+        textView3= (TextView) view.findViewById(R.id.textView3);
         //gridView= (GridView) view.findViewById(R.id.yoga_show_gv);
         shop_cart.setOnClickListener(onClickListener);
         online_service.setOnClickListener(onClickListener);
@@ -82,15 +83,18 @@ public class YogaShopFragment extends Fragment {
                     startActivity(intent);
                     break;
                 case R.id.textView1:
-                    intent = new Intent(myActivity,YogaClothesActivity.class);
+                    intent = new Intent(myActivity,YogaCushionActivity.class);
+                    intent.putExtra("yoga_type",textView1.getText().toString());
                     startActivity(intent);
                     break;
                 case R.id.textView2:
-                    intent = new Intent(myActivity, YogaCushionActivity.class);
+                    intent = new Intent(myActivity,YogaCushionActivity.class);
+                    intent.putExtra("yoga_type",textView2.getText().toString());
                     startActivity(intent);
                     break;
                 case R.id.textView3:
-                    intent = new Intent(myActivity, YogaOtherShopActivity.class);
+                    intent = new Intent(myActivity,YogaCushionActivity.class);
+                    intent.putExtra("yoga_type",textView3.getText().toString());
                     startActivity(intent);
                     break;
 
