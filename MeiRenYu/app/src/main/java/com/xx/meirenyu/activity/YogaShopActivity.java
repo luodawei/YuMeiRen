@@ -32,12 +32,12 @@ public class YogaShopActivity extends Activity {
             Intent intent;
             switch (v.getId()) {
                 case R.id.shop_cart:
-                    intent = new Intent(YogaShopActivity.this, ShopCartJieSuanActivity.class);
-                    startActivity(intent);
+                   /* intent = new Intent(YogaShopActivity.this, ShopCartJieSuanActivity.class);
+                    startActivity(intent);*/
                     break;
                 case R.id.online_service:
-                    intent = new Intent(YogaShopActivity.this, OnlineServiceActivity.class);
-                    startActivity(intent);
+                  /*  intent = new Intent(YogaShopActivity.this, OnlineServiceActivity.class);
+                    startActivity(intent);*/
                     break;
             }
         }
