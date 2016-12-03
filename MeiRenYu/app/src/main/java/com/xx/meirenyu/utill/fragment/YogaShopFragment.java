@@ -2,7 +2,10 @@ package com.xx.meirenyu.utill.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,6 +15,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
 import com.xx.meirenyu.activity.OnlineServiceActivity;
 import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
 import com.xx.meirenyu.activity.YogaClothesActivity;
@@ -22,9 +29,14 @@ import com.xx.meirenyu.utill.adapter.YogaShowGridViewAdapter;
 import com.xx.meirenyu.utill.model.YogaShopGridViewModel;
 import com.yss.yumeiren.R;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -38,6 +50,9 @@ public class YogaShopFragment extends Fragment {
     TextView textView1;
     TextView textView2;
     TextView textView3;
+    public AMapLocationClient mLocationClient=null;
+    //声明定位监听
+    public AMapLocationClientOption mapLocationClientOption=null;
    // GridView gridView;
     //List<YogaShopGridViewModel> list=new ArrayList<YogaShopGridViewModel>();
     @Override
@@ -113,4 +128,6 @@ public class YogaShopFragment extends Fragment {
         }
 
     }*/
+
+
 }
