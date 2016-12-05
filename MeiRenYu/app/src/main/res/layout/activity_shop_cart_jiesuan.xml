@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
-
+    <!--导航栏-->
         <RelativeLayout
             android:id="@+id/jiesuan_top"
             android:layout_width="match_parent"
@@ -45,326 +40,171 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
-        <LinearLayout
-            android:id="@+id/diyipai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/jiesuan_top"
-            android:background="@color/jiesuan_bg_grey"
-            android:orientation="horizontal"
-            android:visibility="visible">
-            <CheckBox
-                android:id="@+id/shop_cart_cb01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checked="false"/>
+        <!--listview-->
+    <ListView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <ImageView
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/diyipai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jiesuan_top"
+        android:background="@color/jiesuan_bg_grey"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <CheckBox
+            android:id="@+id/shop_cart_cb01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/gouwuche_jiesuan01" />
+
+        <LinearLayout
+            android:id="@+id/shop_cart_jiesuan01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="4dp"
+                android:text="@string/jiesuanjieshao01"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:src="@mipmap/gouwuche_jiesuan01" />
+                android:text="@string/jiesuanguige01"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
 
             <LinearLayout
-                android:id="@+id/shop_cart_jiesuan01"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical"
-                android:visibility="visible">
+                android:layout_marginBottom="6dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/jiesuanjieshao01"
+                    android:text="@string/jiege"
                     android:textColor="@color/textcolor"
                     android:textSize="15dp" />
 
                 <TextView
+                    android:id="@+id/price_01"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="52"
+                    android:textColor="@color/red"
+                    android:textSize="15dp" />
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:text="X"/>
+
+                <TextView
+                    android:id="@+id/goods_num_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="15sp"
+                    android:layout_marginRight="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shop_cart_bianji01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/image_sub01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/jian"
+                    android:padding="15dp"
+                    />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/changegoods_num_01"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginRight="10dp"/>
+                <ImageView
+                    android:id="@+id/image_add01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/jia"
+                    android:padding="15dp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:text="@string/jiesuanguige01"
-                    android:textColor="@color/textcolor"
-                    android:textSize="15dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="6dp"
-                    android:gravity="bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/jiege"
-                        android:textColor="@color/textcolor"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:id="@+id/price_01"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="52"
-                        android:textColor="@color/red"
-                        android:textSize="15dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X"/>
-
-                    <TextView
-                        android:id="@+id/goods_num_01"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textSize="15sp"
-                        android:layout_marginRight="20dp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/shop_cart_bianji01"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical"
-                android:visibility="gone">
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <ImageView
-                        android:id="@+id/image_sub01"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/jian"
-                        android:padding="15dp"
-                        />
-                    <View
-                        android:layout_width="0.5dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/white"
-                        android:layout_marginLeft="10dp"/>
-                    <TextView
-                        android:id="@+id/changegoods_num_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="1"
-                        android:textSize="20sp"
-                        android:gravity="center"/>
-                    <View
-                        android:layout_width="0.5dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/white"
-                        android:layout_marginRight="10dp"/>
-                    <ImageView
-                        android:id="@+id/image_add01"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/jia"
-                        android:padding="15dp"
-                        />
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/white"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/jiesuanguige01"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_vertical"
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/xia"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"/>
-                </LinearLayout>
-
+                    android:src="@mipmap/xia"
+                    android:layout_gravity="center_vertical"
+                    android:padding="15dp"/>
             </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/dierpai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/diyipai"
-            android:layout_marginTop="2dp"
-            android:background="@color/jiesuan_bg_grey"
-            android:orientation="horizontal"
-            android:visibility="visible">
-            <CheckBox
-                android:id="@+id/shop_cart_cb02"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:checked="false"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="6dp"
-                android:src="@mipmap/gouwuche_jiesuan02" />
-
-            <LinearLayout
-                android:id="@+id/shop_cart_jiesuan02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical"
-                android:visibility="visible">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jiesuanjieshao02"
-                    android:textColor="@color/textcolor"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/jiesuanguige02"
-                    android:textColor="@color/textcolor"
-                    android:textSize="15dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="6dp"
-                    android:gravity="bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/jiege"
-                        android:textColor="@color/textcolor"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:id="@+id/price_02"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="98"
-                        android:textColor="@color/red"
-                        android:textSize="15dp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X"/>
-                    <TextView
-                        android:id="@+id/goods_num_02"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textSize="15sp"
-                        android:layout_marginRight="20dp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/shop_cart_bianji02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical"
-                android:visibility="gone">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <ImageView
-                        android:id="@+id/image_sub02"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/jian"
-                        android:padding="15dp"
-                        />
-                    <View
-                        android:layout_width="0.5dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/white"
-                        android:layout_marginLeft="10dp"/>
-                    <TextView
-                        android:id="@+id/changegoods_num_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="1"
-                        android:textSize="20sp"
-                        android:gravity="center"/>
-                    <View
-                        android:layout_width="0.5dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/white"
-                        android:layout_marginRight="10dp"/>
-                    <ImageView
-                        android:id="@+id/image_add02"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/jia"
-                        android:padding="15dp"
-                        />
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/white"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/jiesuanguige02"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_vertical"
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/xia"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--<ListView-->
-            <!--android:id="@+id/shop_cart_lv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-        <!--</ListView>-->
     </LinearLayout>
+    <!--底部导航栏-->
     <RelativeLayout
         android:id="@+id/jiesuan_layout"
         android:layout_width="match_parent"
@@ -421,6 +261,7 @@
             android:layout_alignParentRight="true"
             />
     </RelativeLayout>
+<!--
     <RelativeLayout
         android:id="@+id/shanchu_layout"
         android:layout_width="match_parent"
@@ -453,5 +294,5 @@
             android:background="@color/meirenyu_bg_green"
             android:layout_alignParentRight="true"
             />
-    </RelativeLayout>
-</RelativeLayout>
+    </RelativeLayout>-->
+</LinearLayout>
