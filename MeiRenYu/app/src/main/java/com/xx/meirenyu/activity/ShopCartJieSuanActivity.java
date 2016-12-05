@@ -32,7 +32,7 @@ public class ShopCartJieSuanActivity extends Activity {
             image_add01,
             image_sub02,
             image_add02;
-    CheckedTextView shop_cart_bianji;
+    CheckBox shop_cart_bianji;
     LinearLayout shop_cart_jiesuan01,
             shop_cart_jiesuan02,
             Shop_cart_bianji01,
@@ -52,7 +52,7 @@ public class ShopCartJieSuanActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_cart_jiesuan);
-        shop_cart_bianji = (CheckedTextView) findViewById(R.id.shop_cart_editing);
+        shop_cart_bianji = (CheckBox) findViewById(R.id.shop_cart_editing);
         fanhui = (ImageView) findViewById(R.id.fanhui);
         shop_cart_jiesuan01 = (LinearLayout) findViewById(R.id.shop_cart_jiesuan01);
         shop_cart_jiesuan02 = (LinearLayout) findViewById(R.id.shop_cart_jiesuan02);

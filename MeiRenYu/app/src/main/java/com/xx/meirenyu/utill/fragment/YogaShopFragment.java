@@ -64,6 +64,7 @@ public class YogaShopFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        myActivity = getActivity();
         view = inflater.inflate(R.layout.fragment_yoga_shop,null);
         shop_cart = (ImageView) view.findViewById(R.id.shop_cart);
         online_service = (ImageView) view.findViewById(R.id.online_service);
@@ -76,10 +77,9 @@ public class YogaShopFragment extends Fragment {
         textView1.setOnClickListener(onClickListener);
         textView2.setOnClickListener(onClickListener);
         textView3.setOnClickListener(onClickListener);
-        myActivity = getActivity();
-       // getData();
+        // getData();
         //YogaShowGridViewAdapter yogaShowGridViewAdapter=new YogaShowGridViewAdapter(getActivity(),list);
-       // gridView.setAdapter(yogaShowGridViewAdapter);
+        // gridView.setAdapter(yogaShowGridViewAdapter);
         return view;
 
     }
