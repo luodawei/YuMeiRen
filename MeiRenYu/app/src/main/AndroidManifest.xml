@@ -51,6 +51,10 @@
         <activity android:name="com.xx.meirenyu.activity.YogaOtherShopActivity"/><!--其他商品-->
         <activity android:name="com.xx.meirenyu.activity.PostMsgLvActivity"/><!--帖子展示页面-->
         <activity android:name="com.xx.meirenyu.activity.IntegralActivity"/><!--积分-->
-        <activity android:name="com.xx.meirenyu.activity.IntegralInGiftsActivity"/><!--积分换好礼-->
+        <activity android:name="com.xx.meirenyu.activity.IntegralInGiftsActivity"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /><!--积分换好礼-->
     </application>
 </manifest>
