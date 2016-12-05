@@ -31,7 +31,8 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
-            <CheckedTextView
+            <CheckBox
+                android:button="@null"
                 android:id="@+id/shop_cart_editing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -127,5 +127,6 @@
     <string name="jubao_type_saorao">广告骚扰</string>
     <string name="fujin">附近</string>
     <string name="zuixin">最新</string>
+    <string name="my_location">我的地址</string>
 
 </resources>
