@@ -42,10 +42,10 @@
         </RelativeLayout>
         <!--listview-->
     <ListView
+        android:id="@+id/shop_cart_listview"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
     </ListView>
 
     <LinearLayout
@@ -62,7 +62,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:checked="false"/>
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,7 +70,6 @@
             android:layout_marginRight="4dp"
             android:layout_marginTop="6dp"
             android:src="@mipmap/gouwuche_jiesuan01" />
-
         <LinearLayout
             android:id="@+id/shop_cart_jiesuan01"
             android:layout_width="match_parent"
