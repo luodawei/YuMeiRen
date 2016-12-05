@@ -1,17 +1,33 @@
 package com.xx.meirenyu.utill.fragment;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
 import com.xx.meirenyu.activity.FansActivity;
+import com.xx.meirenyu.activity.GaoDeActivity;
 import com.xx.meirenyu.activity.MyFriendsActivity;
 import com.xx.meirenyu.activity.MyGuanZhuActivity;
 import com.xx.meirenyu.activity.IntegralActivity;
@@ -22,6 +38,12 @@ import com.xx.meirenyu.activity.ShareAppActivity;
 import com.xx.meirenyu.activity.YogaMyCollectLvActivity;
 import com.xx.meirenyu.activity.YogaWoDeTieZiActivity;
 import com.yss.yumeiren.R;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Administrator on 2016/11/26.
@@ -36,13 +58,13 @@ public class MineFragment extends Fragment {
     LinearLayout attentionLayout;
     LinearLayout fansLayout;
     LinearLayout integralLayout;
+    LinearLayout myLocation;
     ImageView btnSetting;
     Activity activity;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,9 +79,8 @@ public class MineFragment extends Fragment {
         attentionLayout = (LinearLayout) view.findViewById(R.id.attention_layout);
         fansLayout = (LinearLayout) view.findViewById(R.id.fans_layout);
         integralLayout = (LinearLayout) view.findViewById(R.id.integral_layout);
-
+        myLocation= (LinearLayout) view.findViewById(R.id.my_location);
         btnSetting = (ImageView) view.findViewById(R.id.btn_setting);
-
         myFriendLayout.setOnClickListener(onClickListener);
         myPlanLayout.setOnClickListener(onClickListener);
         myCollectionLayout.setOnClickListener(onClickListener);
@@ -70,6 +91,7 @@ public class MineFragment extends Fragment {
         attentionLayout.setOnClickListener(onClickListener);
         fansLayout.setOnClickListener(onClickListener);
         integralLayout.setOnClickListener(onClickListener);
+        myLocation.setOnClickListener(onClickListener);
         return view;
     }
 
@@ -128,7 +150,13 @@ public class MineFragment extends Fragment {
                     intent = new Intent(activity,IntegralActivity.class);
                     startActivity(intent);
                     break;
+                case R.id.my_location:
+                    intent = new Intent(activity,GaoDeActivity.class);
+                    startActivity(intent);
+                    break;
             }
         }
     };
+
+
 }
