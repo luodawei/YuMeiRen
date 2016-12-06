@@ -5,11 +5,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.CheckedTextView;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -77,12 +79,13 @@ public class ShopCartJieSuanActivity extends Activity {
     }
     ListView.OnItemClickListener onItemClickListener =new AdapterView.OnItemClickListener() {
         @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
             shopNumber= (TextView) view.findViewById(R.id.shop_number);
             changeShopNumber= (TextView) view.findViewById(R.id.change_shop_number);
             shopAdd= (ImageView) view.findViewById(R.id.shop_add);
             shopSub=(ImageView)view.findViewById(R.id.shop_sub);
             shopCart=list.get(position);
+            sonCheck= (CheckBox) view.findViewById(R.id.chance_shop);
             shopAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -105,6 +108,15 @@ public class ShopCartJieSuanActivity extends Activity {
                 }
             });
 
+            sonCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    shopCart.setCheckBox(isChecked);
+                    totolPrice.setText(tongji()+"");
+                    shopCartAdapter.notifyDataSetChanged();
+                    Log.i("TAG","shopCart.setCheckBox(sonCheck.isChecked());");
+                }
+            });
         }
     };
     //按钮点击事件
@@ -130,5 +142,14 @@ public class ShopCartJieSuanActivity extends Activity {
             }
         }
     };
+    public double tongji(){
+        double mostPrice=0;
+        for(ShopCart shop:list){
+            if (shop.isCheckBox()){
+                mostPrice+=shopCart.getGoodsprice();
+            }
+        }
+        return mostPrice;
+    }
 
 }
