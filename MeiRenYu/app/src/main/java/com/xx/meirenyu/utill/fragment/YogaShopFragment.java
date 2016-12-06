@@ -19,6 +19,7 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.xx.meirenyu.activity.MyOrderActivity;
 import com.xx.meirenyu.activity.OnlineServiceActivity;
 import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
 import com.xx.meirenyu.activity.YogaClothesActivity;
