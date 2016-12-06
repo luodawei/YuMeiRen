@@ -34,13 +34,13 @@ public class ShopCartJieSuanActivity extends Activity {
     CheckBox shopCartEdit;//编辑按钮
     CheckBox sonCheck;//item子项的选择按钮
     TextView totolPrice;//总价
-    TextView shopNumber,shopPrice;
+    ImageView shopAdd,shopSub;
+    TextView shopNumber,shopPrice,changeShopNumber;
     boolean isCheck=true;
     LayoutInflater inflater;
     View shopCartLayout;
     ShopCartAdapter shopCartAdapter;
     LinearLayout shopCartLayoutBottom,editShopLayoutBottom;
-    ImageView shopAdd,shopSub;
     ShopCart shopCart;
     Context context;
     List<Boolean> booleen=new ArrayList<Boolean>();
@@ -78,6 +78,32 @@ public class ShopCartJieSuanActivity extends Activity {
     ListView.OnItemClickListener onItemClickListener =new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            shopNumber= (TextView) view.findViewById(R.id.shop_number);
+            changeShopNumber= (TextView) view.findViewById(R.id.change_shop_number);
+            shopAdd= (ImageView) view.findViewById(R.id.shop_add);
+            shopSub=(ImageView)view.findViewById(R.id.shop_sub);
+            shopCart=list.get(position);
+            shopAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int num=shopCart.getGoodsnum()+1;
+                    shopCart.setGoodsnum(num);
+                    shopCartAdapter.notifyDataSetChanged();
+                }
+            });
+            shopSub.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(shopCart.getGoodsnum()>1){
+                        int num=shopCart.getGoodsnum()-1;
+                        shopCart.setGoodsnum(num);
+                        shopCartAdapter.notifyDataSetChanged();
+                    }else{
+                        Toast.makeText(context,"不能再减了",Toast.LENGTH_SHORT).show();
+                        shopCartAdapter.notifyDataSetChanged();
+                    }
+                }
+            });
 
         }
     };
