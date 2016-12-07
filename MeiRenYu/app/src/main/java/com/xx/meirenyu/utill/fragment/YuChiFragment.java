@@ -11,10 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.xx.meirenyu.activity.PersonPagersActivity;
 import com.xx.meirenyu.activity.PostActivity;
 import com.xx.meirenyu.activity.PostMsgLvActivity;
 import com.xx.meirenyu.utill.adapter.YuChiNearbyAdapter;
@@ -30,7 +32,6 @@ public class YuChiFragment extends Fragment {
     ListView yuChiListView;
     Activity activity;
     ImageView btnAdd;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,33 +61,23 @@ public class YuChiFragment extends Fragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Log.i("onItemClick", "onItemClick");
             Intent intent;
-            switch (position) {
-                case 0:
-                    intent = new Intent(activity, PostMsgLvActivity.class);
+            ImageView user_portrait= (ImageView) view.findViewById(R.id.user_portrait);
+            user_portrait.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, PersonPagersActivity.class);
                     startActivity(intent);
-                    Toast.makeText(activity, "点击了Item", Toast.LENGTH_SHORT).show();
-                    break;
-                case 1:
-                    intent = new Intent(activity, PostMsgLvActivity.class);
+                }
+            });
+            LinearLayout postImg= (LinearLayout) view.findViewById(R.id.post_img);
+            postImg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, PostMsgLvActivity.class);
                     startActivity(intent);
-                    Toast.makeText(activity, "点击了Item", Toast.LENGTH_SHORT).show();
-                    break;
-                case 2:
-                    intent = new Intent(activity, PostMsgLvActivity.class);
-                    startActivity(intent);
-                    Toast.makeText(activity, "点击了Item", Toast.LENGTH_SHORT).show();
-                    break;
-                case 3:
-                    intent = new Intent(activity, PostMsgLvActivity.class);
-                    startActivity(intent);
-                    Toast.makeText(activity, "点击了Item", Toast.LENGTH_SHORT).show();
-                    break;
-                case 4:
-                    intent = new Intent(activity, PostMsgLvActivity.class);
-                    startActivity(intent);
-                    Toast.makeText(activity, "点击了Item", Toast.LENGTH_SHORT).show();
-                    break;
-            }
+                }
+            });
+
         }
     };
 

@@ -35,7 +35,9 @@ public class ShopCartJieSuanActivity extends Activity {
     List<ShopCart> list=new ArrayList<ShopCart>();
     CheckBox shopCartEdit;//编辑按钮
     CheckBox sonCheck;//item子项的选择按钮
+    CheckBox chanceAllShop;//全选按钮
     TextView totolPrice;//总价
+    TextView deleteAllShop;//结算
     ImageView shopAdd,shopSub;
     TextView shopNumber,shopPrice,changeShopNumber;
     boolean isCheck=true;
@@ -45,11 +47,15 @@ public class ShopCartJieSuanActivity extends Activity {
     LinearLayout shopCartLayoutBottom,editShopLayoutBottom;
     ShopCart shopCart;
     Context context;
-    List<Boolean> booleen=new ArrayList<Boolean>();
+    ImageView backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_shop_cart_lv);
+        init();
+    }
+    //初始化方法
+    public void init(){
         inflater=LayoutInflater.from(this);
         context=this;
         shopCartLayout=inflater.inflate(R.layout.activity_my_shop_cart_lv_item,null);
@@ -58,10 +64,14 @@ public class ShopCartJieSuanActivity extends Activity {
         shopCartLayoutBottom= (LinearLayout) findViewById(R.id.shop_cart_layout_bottom);
         editShopLayoutBottom= (LinearLayout) findViewById(R.id.edit_layout_bottom);
         totolPrice= (TextView) findViewById(R.id.totol_price);
+        chanceAllShop= (CheckBox) findViewById(R.id.chance_all_shop);
+        deleteAllShop= (TextView) findViewById(R.id.delete_shop);
+        backBtn= (ImageView) findViewById(R.id.back_btn);
         List<ShopCart> list=getData();
         shopCartAdapter=new ShopCartAdapter(this,list,isCheck);
         shopCartListView.setAdapter(shopCartAdapter);
         shopCartEdit.setOnClickListener(onClickListener);
+        backBtn.setOnClickListener(onClickListener);
         shopCartListView.setOnItemClickListener(onItemClickListener);
     }
     public List<ShopCart> getData(){
@@ -138,6 +148,17 @@ public class ShopCartJieSuanActivity extends Activity {
                     }
                     shopCartAdapter=new ShopCartAdapter(ShopCartJieSuanActivity.this,list,isCheck);
                     shopCartListView.setAdapter(shopCartAdapter);
+                    break;
+                case R.id.delete_shop:
+                    if (chanceAllShop.isChecked()){
+                        for (ShopCart shop: list){
+                            shop.setCheckBox(true);
+                        }
+                    }
+                    shopCartAdapter.notifyDataSetChanged();
+                    break;
+                case R.id.back_btn:
+                    finish();
                     break;
             }
         }

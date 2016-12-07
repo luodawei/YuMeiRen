@@ -22,12 +22,14 @@ public class PostMsgLvActivity extends Activity {
     ImageView btnMenu;
     ListView yuChiListView;
     PopupWindow popupWindow;
+    ImageView btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_a_msg_lv);
         yuChiListView = (ListView) findViewById(R.id.yu_chi_list_view);
         btnMenu = (ImageView) findViewById(R.id.btn_menu);
+        btnBack= (ImageView) findViewById(R.id.back_btn);
         yuChiListView.setAdapter(new PostMsgListViewAdapter(this));
 
         createPopupWindow();
@@ -78,6 +80,7 @@ public class PostMsgLvActivity extends Activity {
                         startActivity(intent);
                         popupWindow.dismiss();
                         break;
+
                 }
             }
         };
