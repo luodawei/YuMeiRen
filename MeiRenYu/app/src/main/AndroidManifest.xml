@@ -74,6 +74,7 @@
         <activity android:name="com.xx.meirenyu.activity.IntegralActivity"/><!--积分-->
         <activity android:name="com.xx.meirenyu.activity.IntegralInGiftsActivity"/><!--积分换好礼-->
         <activity android:name="com.xx.meirenyu.activity.GaoDeActivity"/>
+        <activity android:name="com.xx.meirenyu.activity.PersonPagersActivity"/><!--用户个人页面-->
         <service android:name="com.amap.api.location.APSService"></service>
     </application>
 </manifest>

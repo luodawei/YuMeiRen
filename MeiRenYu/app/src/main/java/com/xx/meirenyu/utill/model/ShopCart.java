@@ -8,6 +8,16 @@ import android.widget.CheckBox;
 public class ShopCart {
     String title;
     String context;
+    int shopImg;
+
+    public int getShopImg() {
+        return shopImg;
+    }
+
+    public void setShopImg(int shopImg) {
+        this.shopImg = shopImg;
+    }
+
     int goodsnum;
     float goodsprice;
 
@@ -43,15 +53,13 @@ public class ShopCart {
         this.goodsprice = goodsprice;
     }
 
-    public CheckBox getIscheck() {
-        return ischeck;
+    boolean checkBox;
+
+    public boolean isCheckBox() {
+        return checkBox;
     }
 
-    public void setIscheck(CheckBox ischeck) {
-        this.ischeck = ischeck;
+    public void setCheckBox(boolean checkBox) {
+        this.checkBox = checkBox;
     }
-
-    CheckBox ischeck;
-
-
 }

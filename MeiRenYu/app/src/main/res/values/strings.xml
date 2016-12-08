@@ -3,13 +3,13 @@
     <string name="gouwu_che">购物车</string>
     <string name="gouwuche_kongbai">什么都还没有诶\n不来一点吗？</string>
     <string name="bianji">编辑</string>
-    <string name="jiesuanjieshao01">梵酷初学加厚型瑜伽垫*1</string>
+    <string name="jiesuanjieshao01">梵酷初学加厚型瑜伽垫</string>
     <string name="jiesuanguige01">颜色:蓝色  大小:标准尺寸</string>
     <string name="jiesuanjieshao02">健身瑜伽服两件套*1</string>
     <string name="jiesuanguige02">颜色:黑色 大小:M</string>
     <string name="jiesuan">结算:</string>
     <string name="shop_cart_jiesuan">结算</string>
-    <string name="jiege">价格:</string>
+    <string name="jiege">￥</string>
     <string name="shanchu">删除</string>
     <string name="ding_dan">订单</string>
     <string name="jiazaiIng">加载ING</string>

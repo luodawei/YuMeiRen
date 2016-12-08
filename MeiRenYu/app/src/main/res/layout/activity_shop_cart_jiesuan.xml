@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <LinearLayout
@@ -54,7 +55,7 @@
             android:layout_marginRight="12dp"
             android:scrollbars="none">
         </ListView>
-
+        <!--购物车导航兰-->
         <RelativeLayout
             android:id="@+id/jiesuan_shopcart"
             android:layout_width="match_parent"
@@ -112,7 +113,7 @@
                 android:layout_alignParentRight="true"
                 />
         </RelativeLayout>
-
+        <!--编辑底部导航栏-->
         <RelativeLayout
             android:id="@+id/shanchu_shopcart"
             android:layout_width="match_parent"
