@@ -3,6 +3,9 @@ package com.xx.meirenyu.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +19,13 @@ import com.xx.meirenyu.utill.adapter.MyPlanAdapter;
 import com.xx.meirenyu.utill.view.SwipeListLayout;
 import com.yss.yumeiren.R;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -44,6 +54,13 @@ public class MyPlanListViewActivity extends Activity {
         listView.setAdapter(new ListAdapter());
         btnBack.setOnClickListener(getOnClickListener());
         btnAdd.setOnClickListener(getOnClickListener());
+        /*new Thread(){
+            @Override
+            public void run() {
+                getPlan();
+            }
+        }.start();*/
+
     }
     private void getData(){
         for (int i = 0;i<15;i++){
@@ -68,7 +85,45 @@ public class MyPlanListViewActivity extends Activity {
         };
         return onClickListener;
     }
+    public void getPlan(){
+        HttpURLConnection httpURLConnection = null;
+        String httpUrl = "http://10.0.2.2/index.php/home/plan/addplan?user_id=2";
+        try {
+            URL url = new URL(httpUrl);
+            try {
+                httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("GET");
+                httpURLConnection.setConnectTimeout(5000);
+                httpURLConnection.connect();
+                if(httpURLConnection.getResponseCode()==200){
+                    StringBuilder stringBuilder = new StringBuilder();
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"utf-8");
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                    String s;
+                    while ((s = bufferedReader.readLine())!=null){
+                        stringBuilder.append(s);
+                    }
+                    Log.i("data==>",stringBuilder.toString());
 
+
+                }else {
+                    Log.i("请求失败","状态码为："+httpURLConnection.getResponseCode());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            getPlan();
+        }
+    };
     class ListAdapter extends BaseAdapter{
 
         @Override
