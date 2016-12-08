@@ -15,6 +15,7 @@ public class PostShareActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_post_share);
         btn_back= (ImageView) findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,7 +23,5 @@ public class PostShareActivity extends Activity {
                 finish();
             }
         });
-        setContentView(R.layout.activity_post_share);
-
     }
 }
