@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_weight="1"
+        android:id="@+id/personal_pages_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/add_collection"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColor="#2fd2d1"
+            android:textSize="18sp"
+            android:text="+关注"
+            android:background="#f1f1f1"
+            android:gravity="center"
+            android:layout_margin="1dp"/>
+        <TextView
+            android:id="@+id/add_friends"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColor="#2fd2d1"
+            android:textSize="18sp"
+            android:text="+加好友"
+            android:background="#f1f1f1"
+            android:gravity="center"
+            android:layout_margin="1dp"/>
+    </LinearLayout>
+</LinearLayout>
