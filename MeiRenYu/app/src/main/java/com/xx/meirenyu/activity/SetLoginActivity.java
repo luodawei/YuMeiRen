@@ -17,7 +17,6 @@ import com.yss.yumeiren.R;
 public class SetLoginActivity extends Activity {
     TextView btnLogin;
     TextView btnRegister;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +32,9 @@ public class SetLoginActivity extends Activity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btn_login:
-                    Intent intent = new Intent(SetLoginActivity.this, MineFragment.class);
+
+                    Intent intent = new Intent(SetLoginActivity.this, YogaHomeActivity.class);
+                    intent.putExtra("HaveLogin",true);
                     startActivity(intent);
                     break;
                 case R.id.btn_register:
