@@ -9,19 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/main_blue">
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/arrow_left"
-            android:padding="12dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:layout_centerInParent="true"
             android:textSize="20sp"
-            android:text="登录"/>
+            android:text="登录"
+            android:padding="12dp"/>
     </RelativeLayout>
     <ImageView
         android:id="@+id/logo"
