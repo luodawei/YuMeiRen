@@ -15,7 +15,6 @@ import android.view.ViewParent;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.amap.api.location.AMapLocationClient;
@@ -109,9 +108,6 @@ public class YogaShopFragment extends Fragment {
         imageView.setImageResource(img[i]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         list.add(imageView);
-//        viewFlipper.addView(imageView);
-//        viewFlipper.setFlipInterval(1000);//设置切换时间
-//        viewFlipper.startFlipping();
         }
     return list;
     }
@@ -210,12 +206,12 @@ public class YogaShopFragment extends Fragment {
             return view;
         }
     }
-    Handler handler=new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            if (msg !=null){
-                viewPager.setCurrentItem(msg.arg1);
-            }
-        }
-    };
+//    Handler handler=new Handler(){
+//        @Override
+//        public void handleMessage(Message msg) {
+//            if (msg !=null){
+//                viewPager.setCurrentItem(msg.arg1);
+//            }
+//        }
+//    };
 }

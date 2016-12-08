@@ -1,7 +1,6 @@
 package com.xx.meirenyu.utill.fragment;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -141,9 +140,9 @@ public class NoLoginMineFragment extends Fragment {
             }
         }
     };
-    public void loginDialog(){
-        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
-        builder.setTitle("提示")
-                .setIcon()
-    }
+//    public void loginDialog(){
+//        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
+//        builder.setTitle("提示")
+//                .setIcon();
+//    }
 }
