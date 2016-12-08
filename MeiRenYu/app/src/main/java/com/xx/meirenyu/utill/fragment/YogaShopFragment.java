@@ -76,7 +76,10 @@ public class YogaShopFragment extends Fragment {
     ViewPager viewPager;
     int [] img={R.mipmap.tu1,R.mipmap.tu5,R.mipmap.tu3,R.mipmap.tu2};
     RadioGroup radioGroup;
+    LayoutInflater inflater;
     List<RadioButton> buttonList=new ArrayList<RadioButton>();
+    Thread thread=new Thread();
+
     public AMapLocationClient mLocationClient=null;
     //声明定位监听
     public AMapLocationClientOption mapLocationClientOption=null;
@@ -110,7 +113,7 @@ public class YogaShopFragment extends Fragment {
         textView2.setOnClickListener(onClickListener);
         textView3.setOnClickListener(onClickListener);
         shopEdit.setOnClickListener(onClickListener);
-        viewPager.setAdapter(new myPagerAdapter(myActivity,list));
+        viewPager.setAdapter(new myPagerAdapter(myActivity,list,thread));
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -127,7 +130,6 @@ public class YogaShopFragment extends Fragment {
             }
         });
         return view;
-
         }
     public List<ImageView> data(){
     for (int i=0;i<img.length;i++){
@@ -140,18 +142,13 @@ public class YogaShopFragment extends Fragment {
         }
     return list;
     }
-
     public void createRadioButton(){
+        inflater=LayoutInflater.from(myActivity);
         for (int i=0;i<img.length;i++){
-            RadioButton radioButton=new RadioButton(myActivity);
-            RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(20,20);
-            layoutParams.setMargins(10,0,10,0);
+            RadioButton radioButton= (RadioButton) inflater.inflate(R.layout.radio_button,null);
             if (i==0){
                 radioButton.setChecked(true);
             }
-            radioButton.setLayoutParams(layoutParams);
-            radioButton.setButtonDrawable(null);
-            radioButton.setBackgroundResource(R.drawable.shop_viewpager_btn);
             radioButton.setId(i);
             radioGroup.addView(radioButton);
             buttonList.add(radioButton);
@@ -202,7 +199,8 @@ public class YogaShopFragment extends Fragment {
     class myPagerAdapter extends PagerAdapter{
         List<ImageView> list;
         Context context;
-        public myPagerAdapter(Context context,List<ImageView> list){
+        Thread thread;
+        public myPagerAdapter(Context context,List<ImageView> list, Thread thread){
             this.context=context;
             this.list=list;
         }
@@ -222,7 +220,6 @@ public class YogaShopFragment extends Fragment {
         }
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-
             //对ViewPager页号求模取出View列表中要显示的项
             position %= list.size();
             if (position<0){
@@ -240,5 +237,12 @@ public class YogaShopFragment extends Fragment {
             return view;
         }
     }
-
+    Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg !=null){
+                viewPager.setCurrentItem(msg.arg1);
+            }
+        }
+    };
 }
