@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.FrameLayout;
@@ -11,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.xx.meirenyu.utill.fragment.MineFragment;
+import com.xx.meirenyu.utill.fragment.NoLoginMineFragment;
 import com.xx.meirenyu.utill.fragment.YogaShopFragment;
 import com.xx.meirenyu.utill.fragment.YuChiFragment;
 import com.yss.yumeiren.R;
@@ -22,6 +24,7 @@ public class YogaHomeActivity extends Activity {
     Fragment yogaShopFragment;
     Fragment yuChiFragment;
     Fragment mineFragment;
+    Fragment noLoginMineFragment;
     FragmentManager manager;
     FrameLayout yogaHomeContent;
     RadioGroup yogaHome;
@@ -29,6 +32,7 @@ public class YogaHomeActivity extends Activity {
     RadioButton thePool;
     RadioButton theShop;
     RadioButton theMine;
+    boolean isLogin=false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,15 +73,25 @@ public class YogaHomeActivity extends Activity {
         return onCheckedChangeListener;
     }
     public void hideFragment(FragmentTransaction fragmentTransaction){
+        Intent intent=getIntent();
+        isLogin=intent.getBooleanExtra("HaveLogin",false);
         if (yuChiFragment != null){
             fragmentTransaction.hide(yuChiFragment);
         }
         if (yogaShopFragment != null){
             fragmentTransaction.hide(yogaShopFragment);
         }
-        if (mineFragment != null){
-            fragmentTransaction.hide(mineFragment);
+        if (isLogin){
+            if (mineFragment != null){
+                fragmentTransaction.hide(mineFragment);
+            }else{
+                if (noLoginMineFragment != null){
+
+                    fragmentTransaction.hide(noLoginMineFragment);
+                }
+            }
         }
+
     }
     public void setFragment(int index){
         FragmentTransaction transaction = manager.beginTransaction();
@@ -100,12 +114,22 @@ public class YogaHomeActivity extends Activity {
                 }
                 break;
             case 2:
-                if (mineFragment == null){
-                    mineFragment = new MineFragment();
-                    transaction.add(R.id.yoga_home_content,mineFragment);
+                if (isLogin){
+                    if (mineFragment == null){
+                        mineFragment = new MineFragment();
+                        transaction.add(R.id.yoga_home_content,mineFragment);
+                    }else {
+                        transaction.show(mineFragment);
+                    }
                 }else {
-                    transaction.show(mineFragment);
+                    if (noLoginMineFragment == null){
+                        noLoginMineFragment = new NoLoginMineFragment();
+                        transaction.add(R.id.yoga_home_content,noLoginMineFragment);
+                    }else {
+                        transaction.show(noLoginMineFragment);
+                    }
                 }
+
                 break;
         }
         transaction.commit();

@@ -19,12 +19,6 @@
                 android:layout_centerInParent="true"
                 android:textSize="20sp"
                 android:text="@string/not_logged_in"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/set"
-                android:layout_alignParentRight="true"
-                android:padding="16dp"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -277,12 +271,15 @@
                 android:layout_height="wrap_content"
                 android:src="@mipmap/location1"
                 android:paddingLeft="12dp" />
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="@string/my_location"/>
+                android:text="@string/my_location"
+                android:id="@+id/textView6" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

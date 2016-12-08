@@ -237,12 +237,4 @@ public class YogaShopFragment extends Fragment {
             return view;
         }
     }
-    Handler handler=new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            if (msg !=null){
-                viewPager.setCurrentItem(msg.arg1);
-            }
-        }
-    };
 }
