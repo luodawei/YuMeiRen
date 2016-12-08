@@ -67,7 +67,6 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     >
-
                 </RadioGroup>
             </RelativeLayout>
 
