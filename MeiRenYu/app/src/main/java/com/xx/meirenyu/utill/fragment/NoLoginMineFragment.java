@@ -107,4 +107,8 @@ public class NoLoginMineFragment extends Fragment {
             }
         }
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> ldw
 }
