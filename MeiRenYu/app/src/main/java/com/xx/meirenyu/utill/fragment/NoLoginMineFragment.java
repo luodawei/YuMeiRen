@@ -141,9 +141,5 @@ public class NoLoginMineFragment extends Fragment {
             }
         }
     };
-    public void loginDialog(){
-        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
-        builder.setTitle("提示")
-                .setIcon()
-    }
+
 }
