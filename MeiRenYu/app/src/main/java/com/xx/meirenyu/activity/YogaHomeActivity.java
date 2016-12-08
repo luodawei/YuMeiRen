@@ -41,6 +41,10 @@ public class YogaHomeActivity extends Activity {
         yogaHomeContent = (FrameLayout) findViewById(R.id.yoga_home_content);
         manager = getFragmentManager();
         setFragment(1);
+        Intent intent=getIntent();
+        if (intent!=null){
+            isLogin=intent.getBooleanExtra("HaveLogin",false);
+        }
         yogaHome.setOnCheckedChangeListener(getOnCheckedChangeListener());
         thePool = (RadioButton) findViewById(R.id.the_pool);
         theShop = (RadioButton) findViewById(R.id.the_shop);
@@ -73,8 +77,7 @@ public class YogaHomeActivity extends Activity {
         return onCheckedChangeListener;
     }
     public void hideFragment(FragmentTransaction fragmentTransaction){
-        Intent intent=getIntent();
-        isLogin=intent.getBooleanExtra("HaveLogin",false);
+
         if (yuChiFragment != null){
             fragmentTransaction.hide(yuChiFragment);
         }
@@ -129,7 +132,6 @@ public class YogaHomeActivity extends Activity {
                         transaction.show(noLoginMineFragment);
                     }
                 }
-
                 break;
         }
         transaction.commit();

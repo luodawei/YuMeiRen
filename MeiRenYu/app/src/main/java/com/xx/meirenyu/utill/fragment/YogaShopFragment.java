@@ -40,6 +40,7 @@ import com.amap.api.location.AMapLocationListener;
 import com.xx.meirenyu.activity.GoodsSearchActivity;
 import com.xx.meirenyu.activity.MyOrderActivity;
 import com.xx.meirenyu.activity.OnlineServiceActivity;
+import com.xx.meirenyu.activity.SetLoginActivity;
 import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
 import com.xx.meirenyu.activity.YogaClothesActivity;
 import com.xx.meirenyu.activity.YogaCushionActivity;
@@ -47,6 +48,7 @@ import com.xx.meirenyu.activity.YogaHomeActivity;
 import com.xx.meirenyu.activity.YogaOtherShopActivity;
 import com.xx.meirenyu.utill.adapter.YogaShowGridViewAdapter;
 import com.xx.meirenyu.utill.model.YogaShopGridViewModel;
+import com.xx.meirenyu.utill.view.NoLoginDialog;
 import com.yss.yumeiren.R;
 
 import java.lang.ref.WeakReference;
@@ -79,7 +81,7 @@ public class YogaShopFragment extends Fragment {
     LayoutInflater inflater;
     List<RadioButton> buttonList=new ArrayList<RadioButton>();
     Thread thread=new Thread();
-
+    NoLoginDialog noLoginDialog;
     public AMapLocationClient mLocationClient=null;
     //声明定位监听
     public AMapLocationClientOption mapLocationClientOption=null;
@@ -106,6 +108,9 @@ public class YogaShopFragment extends Fragment {
         radioGroup= (RadioGroup) view.findViewById(R.id.shop_img_radio);
         List<ImageView> list=data();
         createRadioButton();
+
+        noLoginDialog=new NoLoginDialog(myActivity);
+
         radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
         shop_cart.setOnClickListener(onClickListener);
         online_service.setOnClickListener(onClickListener);
@@ -166,8 +171,12 @@ public class YogaShopFragment extends Fragment {
             Intent intent;
             switch (v.getId()) {
                 case R.id.shop_cart:
-                    intent = new Intent(myActivity, ShopCartJieSuanActivity.class);
-                    startActivity(intent);
+                    if (myActivity.getIntent().getBooleanExtra("HaveLogin",false)){
+                        intent = new Intent(myActivity, ShopCartJieSuanActivity.class);
+                        startActivity(intent);
+                    }else{
+                        noLoginDialog.loginDialog();
+                    }
                     break;
                 case R.id.online_service:
                     intent = new Intent(myActivity, OnlineServiceActivity.class);
