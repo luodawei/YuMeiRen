@@ -49,10 +49,11 @@ public class GoodsDetailaActivity extends Activity {
                 case R.id.add_shop_car_btn:
                     Toast.makeText(GoodsDetailaActivity.this, "加如购物车成功", Toast.LENGTH_SHORT).toString();
                     break;
-                case R.id.buy_now_btn:
+                /*case R.id.buy_now_btn:
                     Intent intent = new Intent(GoodsDetailaActivity.this, ShopCartJieSuanActivity.class);
                     startActivity(intent);
                     break;
+                    */
             }
         }
     };

@@ -20,7 +20,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.xx.meirenyu.activity.OnlineServiceActivity;
-import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
+//import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
 import com.xx.meirenyu.activity.YogaClothesActivity;
 import com.xx.meirenyu.activity.YogaCushionActivity;
 import com.xx.meirenyu.activity.YogaHomeActivity;
@@ -89,10 +89,11 @@ public class YogaShopFragment extends Fragment {
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()) {
-                case R.id.shop_cart:
+               /* case R.id.shop_cart:
                     intent = new Intent(myActivity, ShopCartJieSuanActivity.class);
                     startActivity(intent);
                     break;
+                    */
                 case R.id.online_service:
                     intent = new Intent(myActivity, OnlineServiceActivity.class);
                     startActivity(intent);
@@ -130,4 +131,4 @@ public class YogaShopFragment extends Fragment {
     }*/
 
 
-}
+        }
