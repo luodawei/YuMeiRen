@@ -29,7 +29,6 @@ import java.net.URLEncoder;
  * Created by David on 2016/10/24.
  * 设置登陆页面
  */
-
 public class SetLoginActivity extends Activity {
     TextView btnLogin;
     TextView btnRegister;
