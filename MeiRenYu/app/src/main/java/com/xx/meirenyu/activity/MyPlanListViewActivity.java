@@ -19,6 +19,10 @@ import com.xx.meirenyu.utill.adapter.MyPlanAdapter;
 import com.xx.meirenyu.utill.view.SwipeListLayout;
 import com.yss.yumeiren.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,6 +30,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -50,23 +55,17 @@ public class MyPlanListViewActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.my_plan_list);
         btnBack = (ImageView) findViewById(R.id.btn_back);
         btnAdd = (ImageView) findViewById(R.id.btn_add);
-        getData();
-        listView.setAdapter(new ListAdapter());
         btnBack.setOnClickListener(getOnClickListener());
         btnAdd.setOnClickListener(getOnClickListener());
-        /*new Thread(){
+        new Thread(){
             @Override
             public void run() {
                 getPlan();
             }
-        }.start();*/
+        }.start();
+        listView.setAdapter(new ListAdapter());
+    }
 
-    }
-    private void getData(){
-        for (int i = 0;i<15;i++){
-            list.add("我的计划"+i);
-        }
-    }
     public View.OnClickListener getOnClickListener(){
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -87,7 +86,7 @@ public class MyPlanListViewActivity extends Activity {
     }
     public void getPlan(){
         HttpURLConnection httpURLConnection = null;
-        String httpUrl = "http://10.0.2.2/index.php/home/plan/addplan?user_id=2";
+        String httpUrl = "http://10.0.2.2/index.php/home/plan/getplan?user_id=2";
         try {
             URL url = new URL(httpUrl);
             try {
@@ -105,25 +104,26 @@ public class MyPlanListViewActivity extends Activity {
                         stringBuilder.append(s);
                     }
                     Log.i("data==>",stringBuilder.toString());
-
-
+                    JSONObject jsonObject = new JSONObject(stringBuilder.toString());
+                    JSONArray jsonArray = jsonObject.getJSONArray("result");
+                    for (int i=0;i<jsonArray.length();i++){
+                        JSONObject object = jsonArray.getJSONObject(i);
+                        String content = object.optString("content");
+                        list.add(content);
+                    }
+                    inputStream.close();
                 }else {
                     Log.i("请求失败","状态码为："+httpURLConnection.getResponseCode());
                 }
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
-    Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            getPlan();
-        }
-    };
     class ListAdapter extends BaseAdapter{
 
         @Override

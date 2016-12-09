@@ -29,7 +29,6 @@ public class GoodsSearchActivity extends Activity {
     private LinearLayout editLayoutFocusable;//搜索栏父控件，用于多去输入框焦点
     private int historyNumber=1;
     private String str;
-    private TextView searchBack;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,23 +42,17 @@ public class GoodsSearchActivity extends Activity {
         historySearchCaiDan= (LinearLayout) findViewById(R.id.history_search_caidan);
         searchEditText= (EditText) findViewById(R.id.search_edit_text);
         historyMenuLayout= (LinearLayout) findViewById(R.id.history_menu_layout);
-<<<<<<< HEAD
         search_back_btn = (TextView) findViewById(R.id.search_back_btn);
-=======
-        searchBack = (TextView) findViewById(R.id.search_back_btn);
 
->>>>>>> ldw
         historyMenuArrarList=new ArrayList<String>();
         str=searchEditText.getText().toString();
         historyMenuArrarList.add(str);
         //设置监听
         searchHotBtn.setOnClickListener(onClickListener);
         searchHistoryBtn.setOnClickListener(onClickListener);
-<<<<<<< HEAD
         search_back_btn.setOnClickListener(onClickListener);
-=======
-        searchBack.setOnClickListener(onClickListener);
->>>>>>> ldw
+
+
     }
     //创建Textview的方法，用来显示输入框输入过的内容
     public void createSearchMenu(){
@@ -102,9 +95,6 @@ public class GoodsSearchActivity extends Activity {
                 hotSearchCaiDan.setVisibility(View.GONE);
                 searchHistoryBtn.setBackgroundColor(getResources().getColor(R.color.head_green));
                 historySearchCaiDan.setVisibility(View.VISIBLE);
-                break;
-            case R.id.search_back_btn:
-                finish();
                 break;
         }
         }
