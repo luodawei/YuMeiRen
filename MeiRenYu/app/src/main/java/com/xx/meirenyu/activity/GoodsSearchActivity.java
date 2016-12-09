@@ -42,8 +42,8 @@ public class GoodsSearchActivity extends Activity {
         historySearchCaiDan= (LinearLayout) findViewById(R.id.history_search_caidan);
         searchEditText= (EditText) findViewById(R.id.search_edit_text);
         historyMenuLayout= (LinearLayout) findViewById(R.id.history_menu_layout);
-        search_back_btn = (TextView) findViewById(R.id.search_back_btn);
 
+        search_back_btn = (TextView) findViewById(R.id.search_back_btn);
         historyMenuArrarList=new ArrayList<String>();
         str=searchEditText.getText().toString();
         historyMenuArrarList.add(str);

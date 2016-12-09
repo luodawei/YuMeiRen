@@ -128,5 +128,7 @@
     <string name="fujin">附近</string>
     <string name="zuixin">最新</string>
     <string name="my_location">我的地址</string>
+    <string name="hint_register_account">请输入手机号</string>
+    <string name="hint_register_repassword">请重新输入密码</string>
 
 </resources>
