@@ -23,8 +23,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-
-
 /**
  * Created by David on 2016/10/24.
  * 设置登陆页面
