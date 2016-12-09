@@ -27,7 +27,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"/>
     <EditText
-        android:inputType="number"
+        android:inputType="text"
         android:maxLength="20"
         android:id="@+id/input_account"
         android:layout_width="match_parent"
@@ -61,6 +61,7 @@
             android:inputType="textPassword"
             android:drawableLeft="@mipmap/input_password"/>
         <CheckBox
+            android:id="@+id/password_look"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
