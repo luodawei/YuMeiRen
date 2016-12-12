@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class GoodsSearchActivity extends Activity {
     private LinearLayout hotSearchCaiDan;//热门搜索菜单框
     private LinearLayout historySearchCaiDan;//历史搜索菜单框
     private EditText searchEditText;//搜索框
+    private TextView search_back_btn;//返回
     private LinearLayout historyMenuLayout;//添加历史搜索菜单页面
     private ArrayList<String> historyMenuArrarList;//存放输入框输入内容的集合
     private LinearLayout editLayoutFocusable;//搜索栏父控件，用于多去输入框焦点
@@ -41,12 +43,16 @@ public class GoodsSearchActivity extends Activity {
         searchEditText= (EditText) findViewById(R.id.search_edit_text);
         historyMenuLayout= (LinearLayout) findViewById(R.id.history_menu_layout);
 
+        search_back_btn = (TextView) findViewById(R.id.search_back_btn);
         historyMenuArrarList=new ArrayList<String>();
         str=searchEditText.getText().toString();
         historyMenuArrarList.add(str);
         //设置监听
         searchHotBtn.setOnClickListener(onClickListener);
         searchHistoryBtn.setOnClickListener(onClickListener);
+        search_back_btn.setOnClickListener(onClickListener);
+
+
     }
     //创建Textview的方法，用来显示输入框输入过的内容
     public void createSearchMenu(){
@@ -73,6 +79,9 @@ public class GoodsSearchActivity extends Activity {
         @Override
         public void onClick(View v) {
         switch (v.getId()){
+            case R.id.search_back_btn:
+                finish();
+                break;
             case R.id.search_hot:
                 /*点击切换热门搜索菜单框*/
                 searchHotBtn.setBackgroundColor(getResources().getColor(R.color.head_green));

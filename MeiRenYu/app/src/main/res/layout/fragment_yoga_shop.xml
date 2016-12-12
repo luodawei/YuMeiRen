@@ -67,10 +67,8 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     >
-
                 </RadioGroup>
             </RelativeLayout>
-
 
             <TextView
                 android:id="@+id/shop_edit"

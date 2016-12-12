@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton
+    android:id="@+id/radio_button"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="10dp"
+    android:layout_height="10dp"
+    android:button="@null"
+    android:background="@drawable/shop_viewpager_btn"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"/>

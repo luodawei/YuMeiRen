@@ -21,6 +21,7 @@ import com.xx.meirenyu.activity.PostActivity;
 import com.xx.meirenyu.activity.PostMsgLvActivity;
 import com.xx.meirenyu.utill.adapter.YuChiNearbyAdapter;
 import com.xx.meirenyu.utill.adapter.YuChiNewAdapter;
+import com.xx.meirenyu.utill.view.NoLoginDialog;
 import com.yss.yumeiren.R;
 
 /**
@@ -32,6 +33,7 @@ public class YuChiFragment extends Fragment {
     ListView yuChiListView;
     Activity activity;
     ImageView btnAdd;
+    NoLoginDialog noLoginDialog;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,7 @@ public class YuChiFragment extends Fragment {
         btnNew = (TextView) view.findViewById(R.id.btn_new);
         btnAdd = (ImageView) view.findViewById(R.id.btn_add);
         activity = getActivity();
+        noLoginDialog=new NoLoginDialog(activity);
 
         yuChiListView.setAdapter(new YuChiNewAdapter(activity));
         yuChiListView.setOnItemClickListener(onItemClickListener);
@@ -65,8 +68,9 @@ public class YuChiFragment extends Fragment {
             user_portrait.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(activity, PersonPagersActivity.class);
-                    startActivity(intent);
+                        Intent intent = new Intent(activity, PersonPagersActivity.class);
+                        intent.putExtra("isLogin",activity.getIntent().getBooleanExtra("HaveLogin",false));
+                        startActivity(intent);
                 }
             });
             LinearLayout postImg= (LinearLayout) view.findViewById(R.id.post_img);

@@ -4,61 +4,30 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ViewFlipper;
 
-import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
-import com.amap.api.location.AMapLocationListener;
 import com.xx.meirenyu.activity.GoodsSearchActivity;
-import com.xx.meirenyu.activity.MyOrderActivity;
 import com.xx.meirenyu.activity.OnlineServiceActivity;
-//import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
-import com.xx.meirenyu.activity.YogaClothesActivity;
+import com.xx.meirenyu.activity.ShopCartJieSuanActivity;
 import com.xx.meirenyu.activity.YogaCushionActivity;
-import com.xx.meirenyu.activity.YogaHomeActivity;
-import com.xx.meirenyu.activity.YogaOtherShopActivity;
-import com.xx.meirenyu.utill.adapter.YogaShowGridViewAdapter;
-import com.xx.meirenyu.utill.model.YogaShopGridViewModel;
 import com.yss.yumeiren.R;
 
-import java.lang.ref.WeakReference;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 
 /**
  * Created by Administrator on 2016/11/26.
@@ -76,7 +45,10 @@ public class YogaShopFragment extends Fragment {
     ViewPager viewPager;
     int [] img={R.mipmap.tu1,R.mipmap.tu5,R.mipmap.tu3,R.mipmap.tu2};
     RadioGroup radioGroup;
+    LayoutInflater inflater;
     List<RadioButton> buttonList=new ArrayList<RadioButton>();
+    Thread thread=new Thread();
+
     public AMapLocationClient mLocationClient=null;
     //声明定位监听
     public AMapLocationClientOption mapLocationClientOption=null;
@@ -103,6 +75,7 @@ public class YogaShopFragment extends Fragment {
         radioGroup= (RadioGroup) view.findViewById(R.id.shop_img_radio);
         List<ImageView> list=data();
         createRadioButton();
+
         radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
         shop_cart.setOnClickListener(onClickListener);
         online_service.setOnClickListener(onClickListener);
@@ -110,7 +83,7 @@ public class YogaShopFragment extends Fragment {
         textView2.setOnClickListener(onClickListener);
         textView3.setOnClickListener(onClickListener);
         shopEdit.setOnClickListener(onClickListener);
-        viewPager.setAdapter(new myPagerAdapter(myActivity,list));
+        viewPager.setAdapter(new myPagerAdapter(myActivity,list,thread));
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -127,7 +100,6 @@ public class YogaShopFragment extends Fragment {
             }
         });
         return view;
-
         }
     public List<ImageView> data(){
     for (int i=0;i<img.length;i++){
@@ -137,21 +109,19 @@ public class YogaShopFragment extends Fragment {
         imageView.setImageResource(img[i]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         list.add(imageView);
+//        viewFlipper.addView(imageView);
+//        viewFlipper.setFlipInterval(1000);//设置切换时间
+//        viewFlipper.startFlipping();
         }
     return list;
     }
-
     public void createRadioButton(){
+        inflater=LayoutInflater.from(myActivity);
         for (int i=0;i<img.length;i++){
-            RadioButton radioButton=new RadioButton(myActivity);
-            RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(20,20);
-            layoutParams.setMargins(10,0,10,0);
+            RadioButton radioButton= (RadioButton) inflater.inflate(R.layout.radio_button,null);
             if (i==0){
                 radioButton.setChecked(true);
             }
-            radioButton.setLayoutParams(layoutParams);
-            radioButton.setButtonDrawable(null);
-            radioButton.setBackgroundResource(R.drawable.shop_viewpager_btn);
             radioButton.setId(i);
             radioGroup.addView(radioButton);
             buttonList.add(radioButton);
@@ -168,11 +138,10 @@ public class YogaShopFragment extends Fragment {
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()) {
-               /* case R.id.shop_cart:
+                case R.id.shop_cart:
                     intent = new Intent(myActivity, ShopCartJieSuanActivity.class);
                     startActivity(intent);
                     break;
-                    */
                 case R.id.online_service:
                     intent = new Intent(myActivity, OnlineServiceActivity.class);
                     startActivity(intent);
@@ -203,7 +172,8 @@ public class YogaShopFragment extends Fragment {
     class myPagerAdapter extends PagerAdapter{
         List<ImageView> list;
         Context context;
-        public myPagerAdapter(Context context,List<ImageView> list){
+        Thread thread;
+        public myPagerAdapter(Context context,List<ImageView> list, Thread thread){
             this.context=context;
             this.list=list;
         }
@@ -223,7 +193,6 @@ public class YogaShopFragment extends Fragment {
         }
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-
             //对ViewPager页号求模取出View列表中要显示的项
             position %= list.size();
             if (position<0){
@@ -241,5 +210,4 @@ public class YogaShopFragment extends Fragment {
             return view;
         }
     }
-
-        }
+}
