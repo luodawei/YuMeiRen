@@ -14,6 +14,7 @@ import com.yss.yumeiren.R;
  */
 
 public class LoginActivity extends Activity {
+    StringBuilder builder=new StringBuilder();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,4 +28,5 @@ public class LoginActivity extends Activity {
             }
         });
     }
+
 }
